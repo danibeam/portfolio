@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
-    line-height: 1.5;
   }
 
   body {
@@ -24,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   p,
   label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
 `;
