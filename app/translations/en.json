@@ -1,6 +1,7 @@
 {
   "app.common.back": "Go back",
   "app.common.cancel": "Cancel",
+  "app.common.go_home": "Go Home",
   "app.common.more": "More info",
   "app.common.send": "Send",
   "app.components.Experience.content": "",

@@ -56,6 +56,23 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
+                                <name>go_home</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description></description>
+                                <comment></comment>
+                                <default_text></default_text>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>es-ES</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
                                 <name>more</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>
