@@ -1,1 +1,4 @@
-[]
+{
+  "app.containers.HomePage.header": "Home page",
+  "app.containers.NotFoundPage.header": "Resource not found"
+}

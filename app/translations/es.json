@@ -1,0 +1,4 @@
+{
+  "app.containers.HomePage.header": "Página de inicio",
+  "app.containers.NotFoundPage.header": "Recurso no encontrado"
+}
