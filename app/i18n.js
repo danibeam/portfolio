@@ -17,7 +17,22 @@ const esTranslationMessages = require('./translations/es.json');
 addLocaleData(enLocaleData);
 addLocaleData(esLocaleData);
 
-const DEFAULT_LOCALE = 'en';
+// const DEFAULT_LOCALE = 'en';
+let DEFAULT_LOCALE;
+const language = navigator.language.split(/[-_]/)[0]; // language without region code
+
+switch (language) {
+  case 'en':
+    DEFAULT_LOCALE = language;
+    break;
+  case 'es':
+    DEFAULT_LOCALE = language;
+    break;
+
+  default:
+    DEFAULT_LOCALE = 'en';
+    break;
+}
 
 // prettier-ignore
 const appLocales = [
