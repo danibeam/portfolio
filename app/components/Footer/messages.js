@@ -13,6 +13,10 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'This is the Footer component!',
   },
+  social_media: {
+    id: `${scope}.social_media`,
+    defaultMessage: 'This is the social_media!',
+  },
   license: {
     id: `${scope}.license`,
     defaultMessage: 'This is the license!',
