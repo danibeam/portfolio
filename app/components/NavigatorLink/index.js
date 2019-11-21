@@ -11,6 +11,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.span`
   text-decoration: none;
+  font-weight: 500;
   &:hover {
     text-decoration: underline;
   }
@@ -19,7 +20,7 @@ const Wrapper = styled.span`
 function NavigatorLink(props) {
   return (
     <Wrapper>
-      <Link to={props.href}>{Children.toArray(props.children)}</Link>
+      <Link to={props.href || '#'}>{Children.toArray(props.children)}</Link>
     </Wrapper>
   );
 }
