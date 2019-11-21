@@ -8,7 +8,7 @@
   "app.components.Experience.header": "",
   "app.components.Experience.headline": "",
   "app.components.Footer.header": "Daniel Belmonte | Portfolio",
-  "app.components.Footer.license.message": "Este proyecto está protegido con una licencia MIT",
+  "app.components.Footer.license": "Este proyecto está protegido bajo licencia MIT",
   "app.components.Footer.social_media": "Redes sociales",
   "app.components.Header.menu.contact": "Contacto",
   "app.components.Header.menu.experience": "Experiencia",

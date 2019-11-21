@@ -13,7 +13,6 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 
 import messages from './messages';
-import NavigatorLink from '../../components/NavigatorLink';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -26,9 +25,6 @@ const NotFound = () => (
     </h1>
     <p>
       <FormattedMessage {...messages.message} />
-      <NavigatorLink>
-        <FormattedMessage {...messages.message} />
-      </NavigatorLink>
     </p>
     <Button>
       <Link to="/" style={{ color: 'white' }}>

@@ -5,12 +5,20 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
   }
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     color: #181818;
+    position: relative;
   }
 
   body.fontLoaded {
