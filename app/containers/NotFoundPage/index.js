@@ -9,6 +9,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
+import Button from 'components/Button';
 
 import messages from './messages';
 
@@ -25,9 +26,9 @@ export default function NotFound() {
       <p>
         <FormattedMessage {...messages.message} />
       </p>
-      <button type="button">
+      <Button>
         <FormattedMessage {...messages.go_home} />
-      </button>
+      </Button>
     </Wrapper>
   );
 }
