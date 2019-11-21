@@ -7,6 +7,7 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import Button from 'components/Button';
@@ -17,18 +18,20 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
-export default function NotFound() {
-  return (
-    <Wrapper>
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
-      <p>
-        <FormattedMessage {...messages.message} />
-      </p>
-      <Button>
+const NotFound = () => (
+  <Wrapper>
+    <h1>
+      <FormattedMessage {...messages.header} />
+    </h1>
+    <p>
+      <FormattedMessage {...messages.message} />
+    </p>
+    <Button>
+      <Link to="/" style={{ color: 'white' }}>
         <FormattedMessage {...messages.go_home} />
-      </Button>
-    </Wrapper>
-  );
-}
+      </Link>
+    </Button>
+  </Wrapper>
+);
+
+export default NotFound;

@@ -9,8 +9,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import './button.scss';
 
-import A from 'components/A';
-
 const StyledButton = styled.button`
   background-color: #556393;
   border: none;
@@ -22,19 +20,21 @@ const StyledButton = styled.button`
   position: relative;
   text-align: center;
   color: #fafafa;
+  text-decoration: none;
+  &:focus {
+    outline: 0;
+  }
 `;
 
 const Button = props => (
-  <StyledButton>
-    <A href={props.href} onClick={props.onClick}>
-      {Children.toArray(props.children)}
-    </A>
+  <StyledButton onClick={props.onClick}>
+    {Children.toArray(props.children)}
   </StyledButton>
 );
 
 Button.propTypes = {
   // handleRoute: PropTypes.func,
-  href: PropTypes.string,
+  // href: PropTypes.string,
   onClick: PropTypes.func,
   // content: PropTypes.string,
   children: PropTypes.node.isRequired,
