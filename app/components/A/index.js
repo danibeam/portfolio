@@ -8,12 +8,15 @@ import styled from 'styled-components';
 
 const A = styled.a`
   font-weight: 500;
+  color: inherit;
   &:focus {
     outline: 0;
-    color: none;
   }
   &:hover {
     text-decoration: underline;
+  }
+  &:visited {
+    color: none;
   }
 `;
 

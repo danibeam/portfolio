@@ -12,6 +12,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import { FormattedMessage } from 'react-intl';
 import SocialMedia from 'components/SocialMedia';
+import A from 'components/A';
 import messages from './messages';
 
 const Wrapper = styled.footer`
@@ -38,11 +39,15 @@ function Footer() {
             <SocialMedia />
           </Col>
         </Row>
-        <Row>
+        <Row style={{ margin: '20px' }}>
           <Col sm={12}>
-            <p>
+            <A
+              href="https://github.com/danibeam/portfolio/blob/master/LICENSE.md"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <FormattedMessage {...messages.license} />
-            </p>
+            </A>
           </Col>
         </Row>
       </Container>

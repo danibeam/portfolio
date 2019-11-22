@@ -14,13 +14,6 @@ function SocialMedia() {
   return (
     <IconContext.Provider value={{ className: 'react-icons' }}>
       <a
-        href="https://twitter.com/danibelmonte_"
-        target="blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter title="Twitter" />
-      </a>
-      <a
         href="https://github.com/danibeam"
         target="blank"
         rel="noopener noreferrer"
@@ -33,6 +26,13 @@ function SocialMedia() {
         rel="noopener noreferrer"
       >
         <FaLinkedin title="Linkedin" />
+      </a>
+      <a
+        href="https://twitter.com/danibelmonte_"
+        target="blank"
+        rel="noopener noreferrer"
+      >
+        <FaTwitter title="Twitter" />
       </a>
     </IconContext.Provider>
   );
