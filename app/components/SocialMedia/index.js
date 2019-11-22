@@ -6,19 +6,36 @@
 
 import React from 'react';
 import { IconContext } from 'react-icons';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import './styles.scss';
 
-import { FaBeer } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function SocialMedia() {
   return (
-    <IconContext.Provider value={{ color: 'white' }}>
-      <FaBeer />
+    <IconContext.Provider value={{ className: 'react-icons' }}>
+      <a
+        href="https://twitter.com/danibelmonte_"
+        target="blank"
+        rel="noopener noreferrer"
+      >
+        <FaTwitter title="Twitter" />
+      </a>
+      <a
+        href="https://github.com/danibeam"
+        target="blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub title="Github" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/daniel-belmonte-amor%C3%B3s-754433132/"
+        target="blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin title="Linkedin" />
+      </a>
     </IconContext.Provider>
   );
 }
-
-SocialMedia.propTypes = {};
 
 export default SocialMedia;
