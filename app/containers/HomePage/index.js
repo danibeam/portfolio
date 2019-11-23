@@ -13,10 +13,12 @@ import { Container, Row, Col } from 'react-grid-system';
 import Footer from 'components/Footer';
 
 import messages from './messages';
+import Header from '../../components/Header';
 
 export default function HomePage() {
   return (
     <React.Fragment>
+      <Header />
       <Container>
         <h1>
           <FormattedMessage {...messages.header} />

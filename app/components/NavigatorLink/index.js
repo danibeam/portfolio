@@ -20,7 +20,9 @@ const Wrapper = styled.span`
 function NavigatorLink(props) {
   return (
     <Wrapper>
-      <Link to={props.href || '#'}>{Children.toArray(props.children)}</Link>
+      <Link to={props.href || '#'} style={{ color: 'inherit' }}>
+        {Children.toArray(props.children)}
+      </Link>
     </Wrapper>
   );
 }
