@@ -3,19 +3,32 @@
  *
  * This contains all the text for the Footer component.
  */
+
+/* eslint-disable camelcase */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.components.Footer';
+export const scope = 'app.components.Footer';
+export const menu_scope = 'app.components.Footer.menu';
 
 export default defineMessages({
-  licenseMessage: {
-    id: `${scope}.license.message`,
-    defaultMessage: 'This project is licensed under the MIT license.',
+  header: {
+    id: `${scope}.header`,
+    defaultMessage: 'This is the Footer component!',
   },
-  authorMessage: {
-    id: `${scope}.author.message`,
-    defaultMessage: `
-      Made with love by {author}.
-    `,
+  navigation_home: {
+    id: `${scope}.menu.home`,
+    defaultMessage: 'Home',
+  },
+  navigation_experience: {
+    id: `${scope}.menu.experience`,
+    defaultMessage: 'Experience',
+  },
+  navigation_contact: {
+    id: `${scope}.menu.contact`,
+    defaultMessage: 'Contact',
+  },
+  license: {
+    id: `${scope}.license`,
+    defaultMessage: 'This is the license!',
   },
 });

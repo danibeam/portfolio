@@ -1,59 +1,47 @@
 /**
- * Testing our Button component
+ *
+ * Tests for Button
+ *
+ * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
+ *
  */
 
 import React from 'react';
-import { fireEvent, render } from 'react-testing-library';
+import { render } from 'react-testing-library';
+import { IntlProvider } from 'react-intl';
+// import 'jest-dom/extend-expect'; // add some helpful assertions
 
 import Button from '../index';
-
-const handleRoute = () => {};
-const href = 'http://mxstbr.com';
-const children = <h1>Test</h1>;
-const renderComponent = (props = {}) =>
-  render(
-    <Button href={href} {...props}>
-      {children}
-    </Button>,
-  );
+import { DEFAULT_LOCALE } from '../../../i18n';
 
 describe('<Button />', () => {
-  it('should render an <a> tag if no route is specified', () => {
-    const { container } = renderComponent({ href });
-    expect(container.querySelector('a')).not.toBeNull();
+  it('Expect to not log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error');
+    render(
+      <IntlProvider locale={DEFAULT_LOCALE}>
+        <Button />
+      </IntlProvider>,
+    );
+    expect(spy).not.toHaveBeenCalled();
   });
 
-  it('should render a <button> tag to change route if the handleRoute prop is specified', () => {
-    const { container } = renderComponent({ handleRoute });
-    expect(container.querySelector('button')).toBeDefined();
+  it('Expect to have additional unit tests specified', () => {
+    expect(true).toEqual(false);
   });
 
-  it('should have children', () => {
-    const { container } = renderComponent();
-    expect(container.querySelector('a').children).toHaveLength(1);
-  });
-
-  it('should handle click events', () => {
-    const onClickSpy = jest.fn();
-    const { container } = renderComponent({ onClick: onClickSpy });
-    fireEvent.click(container.querySelector('a'));
-    expect(onClickSpy).toHaveBeenCalled();
-  });
-
-  it('should have a class attribute', () => {
-    const { container } = renderComponent();
-    expect(container.querySelector('a').hasAttribute('class')).toBe(true);
-  });
-
-  it('should not adopt a type attribute when rendering an <a> tag', () => {
-    const type = 'text/html';
-    const { container } = renderComponent({ href, type });
-    expect(container.querySelector(`a[type="${type}"]`)).toBeNull();
-  });
-
-  it('should not adopt a type attribute when rendering a button', () => {
-    const type = 'submit';
-    const { container } = renderComponent({ handleRoute, type });
-    expect(container.querySelector('button').getAttribute('type')).toBeNull();
+  /**
+   * Unskip this test to use it
+   *
+   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
+   */
+  it.skip('Should render and match the snapshot', () => {
+    const {
+      container: { firstChild },
+    } = render(
+      <IntlProvider locale={DEFAULT_LOCALE}>
+        <Button />
+      </IntlProvider>,
+    );
+    expect(firstChild).toMatchSnapshot();
   });
 });

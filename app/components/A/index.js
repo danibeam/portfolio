@@ -1,14 +1,22 @@
 /**
+ *
  * A link to a certain page, an anchor tag
+ *
  */
 
 import styled from 'styled-components';
 
 const A = styled.a`
-  color: #41addd;
-
+  font-weight: 500;
+  color: inherit;
+  &:focus {
+    outline: 0;
+  }
   &:hover {
-    color: #6cc0e5;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: none;
   }
 `;
 

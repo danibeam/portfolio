@@ -1,6 +1,6 @@
 /**
  *
- * Tests for A
+ * Tests for SocialMedia
  *
  * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
  *
@@ -10,12 +10,12 @@ import React from 'react';
 import { render } from 'react-testing-library';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import A from '../index';
+import SocialMedia from '../index';
 
-describe('<A />', () => {
+describe('<SocialMedia />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<A />);
+    render(<SocialMedia />);
     expect(spy).not.toHaveBeenCalled();
   });
 
@@ -31,7 +31,7 @@ describe('<A />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<A />);
+    } = render(<SocialMedia />);
     expect(firstChild).toMatchSnapshot();
   });
 });
