@@ -12,6 +12,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import { FormattedMessage } from 'react-intl';
 import SocialMedia from 'components/SocialMedia';
+import NavigatorLink from 'components/NavigatorLink';
 import A from 'components/A';
 import messages from './messages';
 
@@ -34,7 +35,19 @@ function Footer() {
           <FormattedMessage {...messages.header} />
         </h3>
         <Row>
-          <Col xs={6}>Footer navigation here!</Col>
+          <Col xs={6}>
+            <NavigatorLink href="/">
+              <FormattedMessage {...messages.navigation_home} />
+            </NavigatorLink>
+            &nbsp;
+            <NavigatorLink href="/experience">
+              <FormattedMessage {...messages.navigation_experience} />
+            </NavigatorLink>
+            &nbsp;
+            <NavigatorLink href="/contact">
+              <FormattedMessage {...messages.navigation_contact} />
+            </NavigatorLink>
+          </Col>
           <Col xs={6}>
             <SocialMedia />
           </Col>

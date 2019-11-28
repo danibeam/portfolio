@@ -16,6 +16,8 @@ import messages from './messages';
 
 const Wrapper = styled.div`
   text-align: center;
+  margin-top: -20px;
+  padding: 2em;
 `;
 
 const NotFound = () => (
