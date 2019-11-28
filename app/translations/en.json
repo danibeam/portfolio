@@ -1,6 +1,7 @@
 {
   "app.common.back": "Go back",
   "app.common.cancel": "Cancel",
+  "app.common.email_subject": "On%20Dani's%20Portfolio",
   "app.common.go_home": "Go Home",
   "app.common.more": "More info",
   "app.common.send": "Send",

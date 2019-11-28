@@ -13,4 +13,18 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'This is the Menu component!',
   },
+  menu: {
+    home: {
+      id: `${scope}.menu.home`,
+      defaultMessage: 'Home',
+    },
+    experience: {
+      id: `${scope}.menu.experience`,
+      defaultMessage: 'Experience',
+    },
+    contact: {
+      id: `${scope}.menu.contact`,
+      defaultMessage: 'Contact',
+    },
+  },
 });

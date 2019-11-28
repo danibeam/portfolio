@@ -35,7 +35,9 @@ function Footer() {
           <FormattedMessage {...messages.header} />
         </h3>
         <Row>
-          <Col xs={6}>
+          <Col md={3} lg={3} />
+
+          <Col xs={6} md={3} lg={3}>
             <NavigatorLink href="/">
               <FormattedMessage {...messages.navigation_home} />
             </NavigatorLink>
@@ -48,9 +50,10 @@ function Footer() {
               <FormattedMessage {...messages.navigation_contact} />
             </NavigatorLink>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} md={3} lg={3}>
             <SocialMedia />
           </Col>
+          <Col md={3} lg={3} />
         </Row>
         <Row style={{ margin: '20px' }}>
           <Col sm={12}>

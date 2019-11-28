@@ -10,7 +10,7 @@ export const StyledMenu = styled.nav`
   background-color: #556393;
   color: #fafafa;
   height: 100vh;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   position: absolute;
   top: 0;
@@ -20,15 +20,19 @@ export const StyledMenu = styled.nav`
   //// display: ${({ open }) => (open ? 'flex' : 'none')};
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   margin: -1.5em 0 -1.5em 0;
-  
+
   @media (max-width: 576px) {
     width: 100%;
   }
 
   a {
+    font-size: 1.5em;
+  }
+
+  span {
     font-size: 2rem;
     text-transform: capitalize;
-    padding: 2rem 0;
+    margin: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-decoration: none;
