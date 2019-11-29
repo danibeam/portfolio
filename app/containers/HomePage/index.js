@@ -23,9 +23,25 @@ export default function HomePage() {
     <React.Fragment>
       <Header />
       <Container>
-        <h1>
+        {/* <h1>
           <FormattedMessage {...messages.header} />
-        </h1>
+        </h1> */}
+        <SimpleSection
+          title={<FormattedMessage {...messages.profile.header} />}
+          headline={<FormattedMessage {...messages.profile.headline} />}
+          content={
+            <FormattedMessage
+              {...messages.profile.content}
+              values={{
+                contact: (
+                  <A href="/contact">
+                    <FormattedMessage id="app.common.get_touch" />
+                  </A>
+                ),
+              }}
+            />
+          }
+        />
         <SimpleSection
           title={<FormattedMessage {...messages.profile.header} />}
           headline={<FormattedMessage {...messages.profile.headline} />}
