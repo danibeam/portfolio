@@ -2,6 +2,7 @@
   "app.common.back": "Volver atrás",
   "app.common.cancel": "Cancelar",
   "app.common.email_subject": "Sobre%20Portfolio%20de%20Dani",
+  "app.common.get_touch": "No dudes en ponerte en contacto conmigo!",
   "app.common.go_home": "Volver a Inicio",
   "app.common.more": "Más info",
   "app.common.send": "Enviar",
@@ -17,12 +18,12 @@
   "app.components.Header.menu.contact": "Contacto",
   "app.components.Header.menu.experience": "Experiencia",
   "app.components.Header.menu.home": "Inicio",
-  "app.components.Profile.content": "Apasionado de las nuevas tendencias en tecnología y desarrollo web. Me encanta construir productos digitales y crear experiencias de usuario interactivas.\n\nSiempre buscando trabajar en proyectos divertidos e interesantes. No dudes en ponerte en contacto conmigo para lo que sea!",
+  "app.components.Profile.content": "Apasionado de las nuevas tendencias en tecnología y desarrollo web. Me encanta construir productos digitales y crear experiencias de usuario interactivas.\n\nSiempre buscando trabajar en proyectos divertidos e interesantes. {contact}",
   "app.components.Profile.header": "Perfil",
-  "app.components.Profile.headline": "Soy un desarrollador Frontend y Full Stack en Javascript, con estudios en Ingeniería Multimedia por la Universidad de Alicante. ",
+  "app.components.Profile.headline": "Soy un desarrollador Frontend y Full Stack en Javascript, con estudios en Ingeniería Multimedia por la Universidad de Alicante.",
   "app.components.Skills.header": "Habilidades",
   "app.components.Skills.headline": "Durante mi carrera, siempres he intentado aprender cosas nuevas en mi tiempo libre, haciendo formación y poniendo en práctica los conocimientos adquiridos.",
-  "app.containers.HomePage.header": "Página de inicio",
+  "app.containers.HomePage.header": "Sobre mí",
   "app.containers.NotFoundPage.header": "Recurso no encontrado",
   "app.containers.NotFoundPage.message": "Vaya! Intenta algo diferente..."
 }

@@ -7,13 +7,16 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Container, Row, Col } from 'react-grid-system';
+import { Container } from 'react-grid-system';
+// import { Fade } from 'react-reveal';
 
 // import styled from 'styled-components';
 import Footer from 'components/Footer';
 
+import A from 'components/A';
 import messages from './messages';
 import Header from '../../components/Header';
+import SimpleSection from '../../components/SimpleSection';
 
 export default function HomePage() {
   return (
@@ -23,24 +26,22 @@ export default function HomePage() {
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
-        <Row>
-          <Col sm={6}>
-            <p>
-              Aliqua exercitation exercitation proident proident incididunt non
-              exercitation labore. Anim pariatur do aliquip proident excepteur
-              consequat pariatur. Qui ut est minim sunt consectetur sint dolore
-              do eiusmod labore laborum proident.
-            </p>
-          </Col>
-          <Col sm={6}>
-            <p>
-              Aliqua exercitation exercitation proident proident incididunt non
-              exercitation labore. Anim pariatur do aliquip proident excepteur
-              consequat pariatur. Qui ut est minim sunt consectetur sint dolore
-              do eiusmod labore laborum proident.
-            </p>
-          </Col>
-        </Row>
+        <SimpleSection
+          title={<FormattedMessage {...messages.profile.header} />}
+          headline={<FormattedMessage {...messages.profile.headline} />}
+          content={
+            <FormattedMessage
+              {...messages.profile.content}
+              values={{
+                contact: (
+                  <A href="/contact">
+                    <FormattedMessage id="app.common.get_touch" />
+                  </A>
+                ),
+              }}
+            />
+          }
+        />
       </Container>
       <Footer />
     </React.Fragment>
