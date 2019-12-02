@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import MultiToggle from 'react-multi-toggle';
 
 import { Container } from 'react-grid-system';
 import styled from 'styled-components';
@@ -31,6 +32,21 @@ const StyledWrapper = styled.div`
   background-color: red;
 `;
 
+const themeOptions = [
+  {
+    displayName: 'Default',
+    value: 'default',
+  },
+  {
+    displayName: 'Dark',
+    value: 'dark',
+  },
+  {
+    displayName: 'Dracula',
+    value: 'dracula',
+  },
+];
+
 export function Skills(props) {
   useInjectReducer({ key: 'skills', reducer });
 
@@ -46,9 +62,12 @@ export function Skills(props) {
           <FormattedMessage {...messages.header} />
         </h2>
         <h3>{props.skills.theme}</h3>
-        <button type="button" onClick={() => handleChangeTheme('light')}>
-          Change Theme
-        </button>
+        <MultiToggle
+          options={themeOptions}
+          selectedOption={props.skills.theme}
+          onSelectOption={handleChangeTheme}
+          label="Select Theme"
+        />
       </Container>
     </StyledWrapper>
   );
