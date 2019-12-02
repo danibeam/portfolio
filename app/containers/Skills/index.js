@@ -12,6 +12,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import MultiToggle from 'react-multi-toggle';
+import './toggle.scss';
 
 import { Container } from 'react-grid-system';
 import styled from 'styled-components';
@@ -29,20 +30,40 @@ const StyledWrapper = styled.div`
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: red;
+  ${props =>
+    props.theme === 'default'
+      ? `
+      background-color: grey;
+      color: black;
+    `
+      : ``}
+  ${props =>
+    props.theme === 'dark'
+      ? `
+          background-color: black;
+          color: white;
+        `
+      : ``}
+  ${props =>
+    props.theme === 'dracula'
+      ? `
+          background-color: blue;
+          color: red;
+        `
+      : ``}  
 `;
 
 const themeOptions = [
   {
-    displayName: 'Default',
+    displayName: '💤',
     value: 'default',
   },
   {
-    displayName: 'Dark',
+    displayName: '🌙',
     value: 'dark',
   },
   {
-    displayName: 'Dracula',
+    displayName: '🧛‍♂️',
     value: 'dracula',
   },
 ];
@@ -56,7 +77,7 @@ export function Skills(props) {
   };
 
   return (
-    <StyledWrapper>
+    <StyledWrapper theme={props.skills.theme}>
       <Container>
         <h2>
           <FormattedMessage {...messages.header} />
@@ -66,7 +87,6 @@ export function Skills(props) {
           options={themeOptions}
           selectedOption={props.skills.theme}
           onSelectOption={handleChangeTheme}
-          label="Select Theme"
         />
       </Container>
     </StyledWrapper>
