@@ -19,8 +19,8 @@ import messages from './messages';
 const Wrapper = styled.footer`
   background-color: #556393;
   color: #fafafa;
-  //// position: absolute;
-  position: inherit;
+  //// position: inherit;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;

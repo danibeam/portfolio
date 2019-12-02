@@ -21,8 +21,12 @@
   "app.components.Profile.content": "Pasionate about new trends in technology and web development. I love building digital products and creating enjoyable user experiences.\n\nI'm always looking to work on fun projects. Feel free to {contact}",
   "app.components.Profile.header": "Profile",
   "app.components.Profile.headline": "I am a Frontend and Javascript Full Stack developer, with a degree in Multimedia Engineering at the University of Alicante.",
+  "app.components.Repositories.action": "View GitHub",
+  "app.components.Repositories.header": "Repositories",
+  "app.components.Skills.core": "Core competencies",
   "app.components.Skills.header": "Skills",
   "app.components.Skills.headline": "During my career, I have always tried to build a good skillset. Learning new stuff in the meantime, doing courses and putting that knowledge to work.",
+  "app.components.Skills.more": "More technical proficiencies",
   "app.containers.HomePage.header": "About me",
   "app.containers.NotFoundPage.header": "Resource not found",
   "app.containers.NotFoundPage.message": "Oops! You may try something different..."

@@ -42,22 +42,6 @@ export default function HomePage() {
             />
           }
         />
-        <SimpleSection
-          title={<FormattedMessage {...messages.profile.header} />}
-          headline={<FormattedMessage {...messages.profile.headline} />}
-          content={
-            <FormattedMessage
-              {...messages.profile.content}
-              values={{
-                contact: (
-                  <A href="/contact">
-                    <FormattedMessage id="app.common.get_touch" />
-                  </A>
-                ),
-              }}
-            />
-          }
-        />
       </Container>
       <Footer />
     </React.Fragment>

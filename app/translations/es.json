@@ -21,8 +21,12 @@
   "app.components.Profile.content": "Apasionado de las nuevas tendencias en tecnología y desarrollo web. Me encanta construir productos digitales y crear experiencias de usuario interactivas.\n\nSiempre buscando trabajar en proyectos divertidos e interesantes. {contact}",
   "app.components.Profile.header": "Perfil",
   "app.components.Profile.headline": "Soy un desarrollador Frontend y Full Stack en Javascript, con estudios en Ingeniería Multimedia por la Universidad de Alicante.",
+  "app.components.Repositories.action": "Ver GitHub",
+  "app.components.Repositories.header": "Repositorios",
+  "app.components.Skills.core": "Competencias principales",
   "app.components.Skills.header": "Habilidades",
   "app.components.Skills.headline": "Durante mi carrera, siempres he intentado aprender cosas nuevas en mi tiempo libre, haciendo formación y poniendo en práctica los conocimientos adquiridos.",
+  "app.components.Skills.more": "Otras habilidades",
   "app.containers.HomePage.header": "Sobre mí",
   "app.containers.NotFoundPage.header": "Recurso no encontrado",
   "app.containers.NotFoundPage.message": "Vaya! Intenta algo diferente..."
