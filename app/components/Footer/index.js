@@ -19,14 +19,15 @@ import messages from './messages';
 const Wrapper = styled.footer`
   background-color: #556393;
   color: #fafafa;
-  //// position: inherit;
-  position: absolute;
+  //// position: absolute;
+  position: inherit;
   right: 0;
   bottom: 0;
   left: 0;
   text-align: center;
   width: 100%;
   padding: 1.5em 0;
+  margin-top: 2em;
 `;
 
 function Footer() {

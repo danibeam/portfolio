@@ -8,9 +8,11 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Container } from 'react-grid-system';
-// import { Fade } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 // import styled from 'styled-components';
+import Repositories from 'containers/Repositories';
+import Skills from 'containers/Skills';
 import Footer from 'components/Footer';
 
 import A from 'components/A';
@@ -26,22 +28,30 @@ export default function HomePage() {
         {/* <h1>
           <FormattedMessage {...messages.header} />
         </h1> */}
-        <SimpleSection
-          title={<FormattedMessage {...messages.profile.header} />}
-          headline={<FormattedMessage {...messages.profile.headline} />}
-          content={
-            <FormattedMessage
-              {...messages.profile.content}
-              values={{
-                contact: (
-                  <A href="/contact">
-                    <FormattedMessage id="app.common.get_touch" />
-                  </A>
-                ),
-              }}
-            />
-          }
-        />
+        <Fade>
+          <SimpleSection
+            title={<FormattedMessage {...messages.profile.header} />}
+            headline={<FormattedMessage {...messages.profile.headline} />}
+            content={
+              <FormattedMessage
+                {...messages.profile.content}
+                values={{
+                  contact: (
+                    <A href="/contact">
+                      <FormattedMessage id="app.common.get_touch" />
+                    </A>
+                  ),
+                }}
+              />
+            }
+          />
+        </Fade>
+        <Fade>
+          <Skills />
+        </Fade>
+        <Fade>
+          <Repositories />
+        </Fade>
       </Container>
       <Footer />
     </React.Fragment>
