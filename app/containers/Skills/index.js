@@ -16,6 +16,7 @@ import './toggle.scss';
 
 import { Container } from 'react-grid-system';
 import styled from 'styled-components';
+import Button from 'components/Button';
 
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectSkills from './selectors';
@@ -40,8 +41,8 @@ const StyledWrapper = styled.div`
   ${props =>
     props.theme === 'dark'
       ? `
-          background-color: black;
-          color: white;
+          background-color: #1d1b1b;
+          color: #fafafa;
         `
       : ``}
   ${props =>
@@ -83,6 +84,7 @@ export function Skills(props) {
           <FormattedMessage {...messages.header} />
         </h2>
         <h3>{props.skills.theme}</h3>
+        <Button color="red">Download CV</Button>
         <MultiToggle
           options={themeOptions}
           selectedOption={props.skills.theme}
