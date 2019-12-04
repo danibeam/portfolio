@@ -10,6 +10,10 @@ export const profileScope = 'app.components.Profile';
 export const commonsScope = 'app.common';
 
 export default defineMessages({
+  loading_portfolio: {
+    id: `${commonsScope}.loading_portfolio`,
+    defaultMessage: 'loading portfolio',
+  },
   header: {
     id: `${scope}.header`,
     defaultMessage: 'This is the HomePage container!',
