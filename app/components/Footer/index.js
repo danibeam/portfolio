@@ -8,7 +8,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row, Col, Visible } from 'react-grid-system';
 
 import { FormattedMessage } from 'react-intl';
 import SocialMedia from 'components/SocialMedia';
@@ -40,20 +40,24 @@ function Footer() {
         <Row>
           <Col md={3} lg={3} />
 
-          <Col xs={6} md={3} lg={3}>
+          <Col xs={12} md={3} lg={3}>
             <NavigatorLink href="/">
               <FormattedMessage {...messages.navigation_home} />
             </NavigatorLink>
-            &nbsp;
+            &nbsp; | &nbsp;
             <NavigatorLink href="/experience">
               <FormattedMessage {...messages.navigation_experience} />
             </NavigatorLink>
-            &nbsp;
+            &nbsp; | &nbsp;
             <NavigatorLink href="/contact">
               <FormattedMessage {...messages.navigation_contact} />
             </NavigatorLink>
           </Col>
-          <Col xs={6} md={3} lg={3}>
+          <Visible xs>
+            <br />
+            <br />
+          </Visible>
+          <Col xs={12} md={3} lg={3}>
             <SocialMedia />
           </Col>
           <Col md={3} lg={3} />

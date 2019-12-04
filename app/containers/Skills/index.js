@@ -16,9 +16,9 @@ import './toggle.scss';
 
 import { Container } from 'react-grid-system';
 import styled from 'styled-components';
-import Button from 'components/Button';
 
 import { useInjectReducer } from 'utils/injectReducer';
+import Slick from 'components/Slick';
 import makeSelectSkills from './selectors';
 import reducer from './reducer';
 import messages from './messages';
@@ -31,11 +31,15 @@ const StyledWrapper = styled.div`
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  padding: 1em 0;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
   ${props =>
     props.theme === 'default'
       ? `
-      background-color: grey;
-      color: black;
+      background-color: #4CA5FF;
+      color: #FFF0D8;
     `
       : ``}
   ${props =>
@@ -48,8 +52,8 @@ const StyledWrapper = styled.div`
   ${props =>
     props.theme === 'dracula'
       ? `
-          background-color: blue;
-          color: red;
+          background-color: #3c4556;
+          color: #FF79C6;
         `
       : ``}  
 `;
@@ -58,14 +62,20 @@ const themeOptions = [
   {
     displayName: '💤',
     value: 'default',
+    background: '',
+    color: '#fafafa',
   },
   {
     displayName: '🌙',
     value: 'dark',
+    background: '#1d1b1b',
+    color: '#fafafa',
   },
   {
     displayName: '🧛‍♂️',
     value: 'dracula',
+    background: '#3c4556',
+    color: '#FF79C6',
   },
 ];
 
@@ -81,10 +91,12 @@ export function Skills(props) {
     <StyledWrapper theme={props.skills.theme}>
       <Container>
         <h2>
-          <FormattedMessage {...messages.header} />
+          <FormattedMessage {...messages.core} />
         </h2>
-        <h3>{props.skills.theme}</h3>
-        <Button color="red">Download CV</Button>
+        <p>
+          <FormattedMessage {...messages.headline} />
+        </p>
+        <Slick />
         <MultiToggle
           options={themeOptions}
           selectedOption={props.skills.theme}

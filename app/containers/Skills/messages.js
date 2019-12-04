@@ -13,4 +13,12 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'This is the Skills container!',
   },
+  core: {
+    id: `${scope}.core`,
+    defaultMessage: 'Core Skills!',
+  },
+  headline: {
+    id: `${scope}.headline`,
+    defaultMessage: 'Skills headline',
+  },
 });

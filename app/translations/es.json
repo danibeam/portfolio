@@ -4,6 +4,7 @@
   "app.common.email_subject": "Sobre%20Portfolio%20de%20Dani",
   "app.common.get_touch": "No dudes en ponerte en contacto conmigo!",
   "app.common.go_home": "Volver a Inicio",
+  "app.common.loading_portfolio": "Cargando portfolio...",
   "app.common.more": "Más info",
   "app.common.send": "Enviar",
   "app.components.Experience.content": "",
@@ -23,11 +24,11 @@
   "app.components.Profile.headline": "Soy un desarrollador Frontend y Full Stack en Javascript, con estudios en Ingeniería Multimedia por la Universidad de Alicante.",
   "app.components.Repositories.action": "Ver GitHub",
   "app.components.Repositories.header": "Repositorios",
-  "app.components.Skills.core": "Competencias principales",
-  "app.components.Skills.header": "Habilidades",
-  "app.components.Skills.headline": "Durante mi carrera, siempres he intentado aprender cosas nuevas en mi tiempo libre, haciendo formación y poniendo en práctica los conocimientos adquiridos.",
-  "app.components.Skills.more": "Otras habilidades",
   "app.containers.HomePage.header": "Sobre mí",
   "app.containers.NotFoundPage.header": "Recurso no encontrado",
-  "app.containers.NotFoundPage.message": "Vaya! Intenta algo diferente..."
+  "app.containers.NotFoundPage.message": "Vaya! Intenta algo diferente...",
+  "app.containers.Skills.core": "Competencias principales",
+  "app.containers.Skills.header": "Habilidades técnicas",
+  "app.containers.Skills.headline": "Durante mi carrera, siempre he intentado aprender cosas nuevas en mi tiempo libre, haciendo formación y poniendo en práctica los conocimientos adquiridos.",
+  "app.containers.Skills.more": "Otras habilidades"
 }
