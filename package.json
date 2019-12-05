@@ -79,6 +79,7 @@
     "ip": "1.1.5",
     "lodash": "4.17.11",
     "minimist": "1.2.0",
+    "particles-bg": "^2.3.12",
     "prop-types": "15.7.2",
     "pure-react-carousel": "^1.24.1",
     "react": "^16.12.0",
