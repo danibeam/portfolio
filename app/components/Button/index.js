@@ -40,24 +40,18 @@ const StyledButton = styled.button`
 `;
 
 const Button = props => (
-  <StyledButton onClick={props.onClick}>
-    {props.hash ? (
-      <Link
-        smooth
-        to={props.hash}
-        // scroll={el => el.scrollIntoView({ behavior: 'instant', block: 'end' })}
-      >
+  <div>
+    <Link smooth to={props.href}>
+      <StyledButton onClick={props.onClick}>
         {Children.toArray(props.children)}
-      </Link>
-    ) : (
-      <Link to={props.href}>{Children.toArray(props.children)}</Link>
-    )}
-  </StyledButton>
+      </StyledButton>
+    </Link>
+  </div>
 );
 
 Button.propTypes = {
   // handleRoute: PropTypes.func,
-  hash: PropTypes.string,
+  // hash: PropTypes.string,
   href: PropTypes.string,
   onClick: PropTypes.func,
   background: PropTypes.string,

@@ -64,7 +64,8 @@ export default function HomePage() {
             <br />
             Frontend & Javascript Full Stack developer
             <br />
-            <Button hash="/home#container">
+            {/* <Button hash="/home#container"> */}
+            <Button href="/home#container">
               <FormattedMessage {...messages.get_started} />
             </Button>
           </Content>
