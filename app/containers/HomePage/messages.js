@@ -14,6 +14,10 @@ export default defineMessages({
     id: `${commonsScope}.loading_portfolio`,
     defaultMessage: 'loading portfolio',
   },
+  get_started: {
+    id: `${commonsScope}.get_started`,
+    defaultMessage: 'get started',
+  },
   header: {
     id: `${scope}.header`,
     defaultMessage: 'This is the HomePage container!',
