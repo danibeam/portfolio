@@ -9,6 +9,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Container } from 'react-grid-system';
 import { Fade } from 'react-reveal';
+import ParticlesBg from 'particles-bg';
 
 import styled from 'styled-components';
 import Repositories from 'containers/Repositories';
@@ -21,6 +22,8 @@ import messages from './messages';
 import Header from '../../components/Header';
 import SimpleSection from '../../components/SimpleSection';
 
+import './styles.scss';
+
 const Cover = styled.div`
   display: flex;
   width: 100%;
@@ -29,7 +32,8 @@ const Cover = styled.div`
   padding: 1em;
   font-size: 1.5em;
   color: #fafafa;
-  background-color: #1d1b1b;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
 `;
 
 const Content = styled.p`
@@ -38,6 +42,7 @@ const Content = styled.p`
   text-align: center;
   text-align: center;
   font-weight: 300;
+  z-index: 9999;
   & button {
     margin: 2em;
   }
@@ -52,17 +57,27 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <Header />
-      <Cover>
-        <Content>
-          <Title>Daniel Belmonte Portfolio</Title>
-          <br />
-          Frontend & Javascript Full Stack developer
-          <br />
-          <Button hash="/home#container">
-            <FormattedMessage {...messages.get_started} />
-          </Button>
-        </Content>
-      </Cover>
+      <div style={{ position: 'relative' }}>
+        <Cover>
+          <Content>
+            <Title>Daniel Belmonte Portfolio</Title>
+            <br />
+            Frontend & Javascript Full Stack developer
+            <br />
+            <Button hash="/home#container">
+              <FormattedMessage {...messages.get_started} />
+            </Button>
+          </Content>
+        </Cover>
+        {/* <Particles /> */}
+        <ParticlesBg
+          className="particles"
+          color="black"
+          num={200}
+          type="lines"
+          bg
+        />
+      </div>
       <Container id="container">
         {/* <h1>
           <FormattedMessage {...messages.header} />

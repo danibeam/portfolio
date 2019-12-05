@@ -15,16 +15,19 @@ const StyledButton = styled.button`
   background-color: ${props =>
     props.background ? props.background : `#556393`};
   border: none;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   cursor: pointer;
   display: inline-block;
   line-height: 2.5;
-  padding: 0 12px;
+  padding: 0 2em;
   position: relative;
   text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
   color: ${props => (props.color ? props.color : `#fafafa`)};
 
-  text-decoration: none;
   &:focus {
     outline: 0;
   }
