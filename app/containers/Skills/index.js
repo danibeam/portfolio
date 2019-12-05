@@ -97,6 +97,9 @@ export function Skills(props) {
           <FormattedMessage {...messages.headline} />
         </p>
         <Slick />
+        <p>
+          <FormattedMessage {...messages.content} />
+        </p>
         <MultiToggle
           options={themeOptions}
           selectedOption={props.skills.theme}

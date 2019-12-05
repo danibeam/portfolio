@@ -21,4 +21,8 @@ export default defineMessages({
     id: `${scope}.headline`,
     defaultMessage: 'Skills headline',
   },
+  content: {
+    id: `${scope}.content`,
+    defaultMessage: 'Skills content',
+  },
 });
