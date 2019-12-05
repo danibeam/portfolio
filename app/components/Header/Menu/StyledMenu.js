@@ -12,14 +12,19 @@ export const StyledMenu = styled.nav`
   height: 100vh;
   text-align: center;
   padding: 2rem;
-  position: absolute;
+  //// position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 99;
   //// display: ${({ open }) => (open ? 'flex' : 'none')};
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-  margin: -1.5em 0 -1.5em 0;
+  //// margin: -1.5em 0 -1.5em 0;
+
+  -webkit-box-shadow: inset 0px 0px 55px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 55px -15px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 55px -15px rgba(0,0,0,0.75);
 
   @media (max-width: 576px) {
     width: 100%;

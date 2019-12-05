@@ -18,7 +18,6 @@ const Wrapper = styled.div`
   color: #fafafa;
   background-color: #1d1b1b;
   vertical-align: middle;
-  padding
 `;
 
 const P = styled.p`

@@ -6,6 +6,7 @@
  */
 
 import React, { Children } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import './button.scss';
@@ -27,17 +28,34 @@ const StyledButton = styled.button`
   &:focus {
     outline: 0;
   }
+  &:a {
+    text-decoration: none;
+  }
+  & a:visited {
+    color: white;
+  }
 `;
 
 const Button = props => (
   <StyledButton onClick={props.onClick}>
-    {Children.toArray(props.children)}
+    {props.hash ? (
+      <Link
+        smooth
+        to={props.hash}
+        // scroll={el => el.scrollIntoView({ behavior: 'instant', block: 'end' })}
+      >
+        {Children.toArray(props.children)}
+      </Link>
+    ) : (
+      <Link to={props.href}>{Children.toArray(props.children)}</Link>
+    )}
   </StyledButton>
 );
 
 Button.propTypes = {
   // handleRoute: PropTypes.func,
-  // href: PropTypes.string,
+  hash: PropTypes.string,
+  href: PropTypes.string,
   onClick: PropTypes.func,
   background: PropTypes.string,
   color: PropTypes.string,
