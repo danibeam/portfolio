@@ -1,16 +1,20 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-expressions */
 /**
  *
  * DownloadCv
  *
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Button from 'components/Button';
 
 import { FormattedMessage } from 'react-intl';
+import { DEFAULT_LOCALE } from 'i18n';
+
 import { FaFilePdf } from 'react-icons/fa';
 import messages from './messages';
 
@@ -63,12 +67,25 @@ const Quote = styled.div`
 `;
 
 function DownloadCv() {
+  const [URL, setURL] = useState('');
+
+  useEffect(() => {
+    const locale = DEFAULT_LOCALE;
+    locale === 'es'
+      ? setURL(
+        'https://drive.google.com/open?id=1avJoH_cJeXxLQSQhtDWw1qCLtPGv5gHi',
+      )
+      : setURL(
+        'https://drive.google.com/open?id=1r8PWcznU1XEKkotXaLgzmWJ0JPKncUaA',
+      );
+  }, []);
+
   return (
     <Styled>
       <Quote>
         <FormattedMessage {...messages.just_cv} />
       </Quote>
-      <Button href="#">
+      <Button href={URL} external>
         <FormattedMessage {...messages.download_cv} />
         <FaFilePdf />
       </Button>

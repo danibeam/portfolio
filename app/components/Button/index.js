@@ -41,11 +41,22 @@ const StyledButton = styled.button`
 
 const Button = props => (
   <div>
-    <Link smooth to={props.href}>
+    {props.external ? (
+      <a href={props.href} target="blank">
+        <StyledButton>{Children.toArray(props.children)}</StyledButton>
+      </a>
+    ) : (
+      <Link smooth to={props.href}>
+        <StyledButton onClick={props.onClick}>
+          {Children.toArray(props.children)}
+        </StyledButton>
+      </Link>
+    )}
+    {/* <Link smooth to={props.href}>
       <StyledButton onClick={props.onClick}>
         {Children.toArray(props.children)}
       </StyledButton>
-    </Link>
+    </Link> */}
   </div>
 );
 
@@ -56,6 +67,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   background: PropTypes.string,
   color: PropTypes.string,
+  external: PropTypes.bool,
   // content: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
