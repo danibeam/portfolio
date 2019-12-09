@@ -25,8 +25,8 @@ const Title = styled.h2`
 `;
 
 const Headline = styled.h3`
-  color: #e2e2e2;
-  font-style: italic;
+  //// color: #e2e2e2;
+  //// font-style: italic;
 `;
 
 const Content = styled.p`

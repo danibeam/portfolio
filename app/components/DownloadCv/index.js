@@ -25,6 +25,7 @@ const Styled = styled.div`
   text-align: center;
   width: 300px;
   margin: 2em auto;
+  border-top: 10px solid #556393;
 
   -webkit-box-shadow: 7px 6px 9px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px 6px 9px 0px rgba(0, 0, 0, 0.75);
@@ -32,9 +33,6 @@ const Styled = styled.div`
 `;
 
 const Quote = styled.div`
-  text-transform: cursive;
-  font-weight: lighter;
-  color: ligthgrey;
 
   display: block;
   border-width: 2px 0;
@@ -43,6 +41,12 @@ const Quote = styled.div`
   padding: 1.5em 0 0.5em;
   margin: 1.5em 0;
   position: relative;
+
+  & span {
+    font-weight: lighter;
+    color: ligthgrey;
+    font-style: oblique;
+  }
 
   &:before {
     content: '\201C';
@@ -66,6 +70,12 @@ const Quote = styled.div`
   }
 `;
 
+const QuoteParagraph = styled.p`
+  font-weight: lighter;
+  color: ligthgrey;
+  font-style: oblique;
+`;
+
 function DownloadCv() {
   const [URL, setURL] = useState('');
 
@@ -83,7 +93,7 @@ function DownloadCv() {
   return (
     <Styled>
       <Quote>
-        <FormattedMessage {...messages.just_cv} />
+        <QuoteParagraph><FormattedMessage {...messages.just_cv} /></QuoteParagraph>
       </Quote>
       <Button href={URL} external>
         <FormattedMessage {...messages.download_cv} />

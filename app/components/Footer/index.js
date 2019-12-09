@@ -53,7 +53,7 @@ function Footer() {
               <FormattedMessage {...messages.navigation_contact} />
             </NavigatorLink>
           </Col>
-          <Visible xs>
+          <Visible xs sm>
             <br />
             <br />
           </Visible>
