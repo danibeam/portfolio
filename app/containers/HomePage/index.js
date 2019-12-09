@@ -8,7 +8,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Container } from 'react-grid-system';
-import { Fade } from 'react-reveal';
+import { Fade, Slide } from 'react-reveal';
 import ParticlesBg from 'particles-bg';
 
 import styled from 'styled-components';
@@ -18,6 +18,8 @@ import Footer from 'components/Footer';
 import Button from 'components/Button';
 
 import A from 'components/A';
+import DownloadCv from 'components/DownloadCv';
+// import ErrorBoundary from 'utils/ErrorBoundary';
 import messages from './messages';
 import Header from '../../components/Header';
 import SimpleSection from '../../components/SimpleSection';
@@ -36,7 +38,7 @@ const Cover = styled.div`
   position: relative;
 `;
 
-const Content = styled.p`
+const Content = styled.div`
   vertical-align: middle;
   margin: auto;
   text-align: center;
@@ -54,13 +56,14 @@ const Title = styled.span`
 `;
 
 export default function HomePage() {
+  window.onerror = () => true;
   return (
     <React.Fragment>
       <Header />
       <div style={{ position: 'relative' }}>
         <Cover>
           <Content>
-            <Title>Daniel Belmonte Portfolio</Title>
+            <Title>Daniel Belmonte</Title>
             <br />
             Frontend & Javascript Full Stack developer
             <br />
@@ -71,6 +74,7 @@ export default function HomePage() {
           </Content>
         </Cover>
         {/* <Particles /> */}
+        {/* // @ts-ignore */}
         <ParticlesBg
           className="particles"
           color="black"
@@ -101,6 +105,9 @@ export default function HomePage() {
             }
           />
         </Fade>
+        <Slide right>
+          <DownloadCv />
+        </Slide>
         <Fade>
           <Skills />
         </Fade>

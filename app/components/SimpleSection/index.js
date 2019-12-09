@@ -44,9 +44,12 @@ function SimpleSection(props) {
 }
 
 SimpleSection.propTypes = {
-  title: PropTypes.string,
-  headline: PropTypes.string,
-  content: PropTypes.string,
+  // title: PropTypes.string,
+  title: PropTypes.object,
+  // headline: PropTypes.string,
+  headline: PropTypes.object,
+  // content: PropTypes.string,
+  content: PropTypes.object,
 };
 
 export default SimpleSection;

@@ -17,7 +17,7 @@ export const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 99;
+  z-index: 99999;
   //// display: ${({ open }) => (open ? 'flex' : 'none')};
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   //// margin: -1.5em 0 -1.5em 0;
