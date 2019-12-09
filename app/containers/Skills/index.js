@@ -36,10 +36,10 @@ const StyledWrapper = styled.div`
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
   ${props =>
-    props.theme === 'default'
+    props.theme === 'expresso'
       ? `
-      background-color: #4CA5FF;
-      color: #FFF0D8;
+      background-color: #766853;
+      color: #bfaf8d;
     `
       : ``}
   ${props =>
@@ -60,8 +60,8 @@ const StyledWrapper = styled.div`
 
 const themeOptions = [
   {
-    displayName: '💤',
-    value: 'default',
+    displayName: '☕',
+    value: 'expresso',
     background: '',
     color: '#fafafa',
   },
@@ -98,7 +98,16 @@ export function Skills(props) {
         </p>
         <Slick />
         <p>
-          <FormattedMessage {...messages.content} />
+          <FormattedMessage
+            {...messages.content}
+            values={{
+              javascript: <strong>Javascript</strong>,
+              frontend: <strong>React & Angular</strong>,
+              redux: <strong>Redux/NGRX</strong>,
+              backend: <strong>Backend</strong>,
+              nodejs: <strong>NodeJS + Express</strong>,
+            }}
+          />
         </p>
         <MultiToggle
           options={themeOptions}

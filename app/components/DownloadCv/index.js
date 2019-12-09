@@ -74,6 +74,7 @@ const QuoteParagraph = styled.p`
   font-weight: lighter;
   color: ligthgrey;
   font-style: oblique;
+  font-size: large;
 `;
 
 function DownloadCv() {

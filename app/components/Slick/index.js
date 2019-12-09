@@ -33,6 +33,7 @@ export default class extends React.Component {
           naturalSlideHeight={50}
           totalSlides={6}
           dragEnabled={false}
+          touchEnabled={false}
           infinite
           visibleSlides={4}
           isPlaying

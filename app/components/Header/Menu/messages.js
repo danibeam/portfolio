@@ -6,7 +6,7 @@
 
 import { defineMessages } from 'react-intl';
 
-export const scope = 'app.components.Menu';
+export const scope = 'app.components.Header';
 
 export default defineMessages({
   header: {
