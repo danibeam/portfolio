@@ -8,9 +8,11 @@ export default function* repositoriesSaga() {
 }
 
 function* getRepos() {
-  const json = yield fetch('https://api.github.com/users/danibeam/repos').then(
+  const json = yield fetch(
+    'https://api.github.com/users/danibeam/repos?visibility=public&sort=updated',
+  ).then(
     res => res.json(),
-    error => console.log('Error fetching repos => ', error),
+    // error => console.log('Error fetching repos => ', error),
   );
 
   yield put({ type: GET_REPOS, json });

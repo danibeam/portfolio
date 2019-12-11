@@ -13,7 +13,6 @@ export function defaultAction() {
 }
 
 export function getRepos() {
-  console.log('getRepos');
   return {
     type: GET_REPOS,
   };

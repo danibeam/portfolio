@@ -13,11 +13,31 @@ import { compose } from 'redux';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
+
 import Repository from 'components/Repository';
+import styled from 'styled-components';
+import { Row } from 'react-grid-system';
+
 import makeSelectRepositories from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
+
+const Title = styled.h2`
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 10px 0;
+    width: 50%;
+    height: 6px;
+    background: #556393;
+  }
+`;
 
 export function Repositories(props) {
   useInjectReducer({ key: 'repositories', reducer });
@@ -27,12 +47,18 @@ export function Repositories(props) {
 
   return (
     <div>
-      <FormattedMessage {...messages.header} />
-      {reducer.loading ? (
-        <p>Loading...</p>
-      ) : (
-        repositories.repos.map(repo => <Repository repo={repo} key={repo.id} />)
-      )}
+      <Title>
+        <FormattedMessage {...messages.header} />
+      </Title>
+      <Row>
+        {reducer.loading ? (
+          <p>Loading...</p>
+        ) : (
+          repositories.repos.map(repo => (
+            <Repository repo={repo} key={repo.id} />
+          ))
+        )}
+      </Row>
     </div>
   );
 }
