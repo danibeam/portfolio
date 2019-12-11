@@ -23,6 +23,7 @@ import DownloadCv from 'components/DownloadCv';
 import messages from './messages';
 import Header from '../../components/Header';
 import SimpleSection from '../../components/SimpleSection';
+import Offer from '../../components/Offer';
 
 import './styles.scss';
 
@@ -104,6 +105,7 @@ export default function HomePage() {
               />
             }
           />
+          <Offer />
         </Fade>
         <Slide right>
           <DownloadCv />

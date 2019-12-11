@@ -11,12 +11,14 @@ import { Col, Row, Container } from 'react-grid-system';
 import A from 'components/A';
 import { FaBalanceScale, FaCalendarDay } from 'react-icons/fa';
 import { FormattedDate } from 'react-intl';
+import Button from 'components/Button';
 
 const Card = styled.div`
   margin: 0.5em 0;
   padding: 1em;
   border-radius: 0.5em;
   box-shadow: 7px 6px 9px 0px rgba(0, 0, 0, 0.75);
+  min-height: 250px;
 `;
 
 const License = styled.div`
@@ -24,9 +26,14 @@ const License = styled.div`
   margin-top: 1.5em;
 `;
 
+const Actions = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
 function Repository({ repo }) {
   return (
-    <Col xs={12} sm={6} md={4} lg={4}>
+    <Col xs={12} sm={6} md={6} lg={6}>
       <Card>
         <Container>
           <Row>
@@ -60,6 +67,15 @@ function Repository({ repo }) {
               </License>
             </Col>
           </Row>
+          <Actions>
+            {repo.homepage !== null ? (
+              <Button external href={repo.homepage}>
+                Demo
+              </Button>
+            ) : (
+              ''
+            )}
+          </Actions>
         </Container>
       </Card>
     </Col>
@@ -73,6 +89,7 @@ Repository.propTypes = {
     description: PropTypes.string,
     license: PropTypes.object,
     updated_at: PropTypes.string,
+    homepage: PropTypes.string,
   }).isRequired,
 };
 

@@ -42,7 +42,7 @@ const StyledButton = styled.button`
 const Button = props => (
   <div>
     {props.external ? (
-      <a href={props.href} target="blank">
+      <a href={props.href} target="blank" rel="noopener noreferrer">
         <StyledButton>{Children.toArray(props.children)}</StyledButton>
       </a>
     ) : (
