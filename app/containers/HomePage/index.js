@@ -105,6 +105,7 @@ export default function HomePage() {
               />
             }
           />
+          <div className="divider div-transparent" />
           <Offer />
         </Fade>
         <Slide right>

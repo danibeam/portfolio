@@ -39,7 +39,7 @@ const StyledWrapper = styled.div`
     props.theme === 'expresso'
       ? `
       background-color: #766853;
-      color: #bfaf8d;
+      color: #f7c661;
     `
       : ``}
   ${props =>
@@ -63,7 +63,7 @@ const themeOptions = [
     displayName: '☕',
     value: 'expresso',
     background: '',
-    color: '#fafafa',
+    color: '#f7c661',
   },
   {
     displayName: '🌙',
