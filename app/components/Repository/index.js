@@ -41,7 +41,7 @@ function Repository({ repo }) {
             <FaCalendarDay />
             &nbsp;
             <FormattedDate
-              value={new Date('2019-12-11T07:49:28Z')}
+              value={new Date(repo.updated_at)}
               year="numeric"
               month="long"
               day="2-digit"
@@ -72,6 +72,7 @@ Repository.propTypes = {
     url: PropTypes.string,
     description: PropTypes.string,
     license: PropTypes.object,
+    updated_at: PropTypes.string,
   }).isRequired,
 };
 
