@@ -8,7 +8,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
-import { FaDev, FaThinkPeaks, FaRegUserCircle } from 'react-icons/fa';
+import { FaGitAlt, FaCode, FaProjectDiagram } from 'react-icons/fa';
 
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
@@ -32,8 +32,9 @@ const Title = styled.h2`
 const OfferIcon = styled.span`
   text-align: center;
   font-size: 5em;
+  transition: 0.5s;
   &:hover {
-    color: red;
+    color: #556393;
   }
 `;
 
@@ -46,21 +47,21 @@ function Offer() {
       <Row style={{ textAlign: 'center' }}>
         <Col xs={12} md={4} lg={4}>
           <OfferIcon>
-            <FaDev />
+            <FaCode />
           </OfferIcon>
           <br />
           <FormattedMessage {...messages.dev} />
         </Col>
         <Col xs={12} md={4} lg={4}>
           <OfferIcon>
-            <FaThinkPeaks />
+            <FaProjectDiagram />
           </OfferIcon>
           <br />
           <FormattedMessage {...messages.architecture} />
         </Col>
         <Col xs={12} md={4} lg={4}>
           <OfferIcon>
-            <FaRegUserCircle />
+            <FaGitAlt />
           </OfferIcon>
           <br />
           <FormattedMessage {...messages.team} />

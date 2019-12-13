@@ -91,7 +91,7 @@ export function Skills(props) {
     <StyledWrapper theme={props.skills.theme}>
       <Container>
         <h2>
-          <FormattedMessage {...messages.core} />
+          <FormattedMessage {...messages.header} />
         </h2>
         <p>
           <FormattedMessage {...messages.headline} />
