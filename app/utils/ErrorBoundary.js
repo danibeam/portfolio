@@ -9,9 +9,9 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, info) {
-    console.log('You had this error -> ', error)
-    console.log('More info -> ', info)
     // Display fallback UI
+    // eslint-disable-next-line no-unused-vars
+    const information = { 'name': error, 'info': info };
     this.setState({ hasError: true });
     // You can also log the error to an error reporting service
     // logErrorToMyService(error, info);

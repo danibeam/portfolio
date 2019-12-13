@@ -17,7 +17,7 @@ function* getRepos() {
     ).toString('base64')}`,
   );
   const json = yield fetch(
-    'https://api.github.com/users/danibeam/repos?visibility=public&sort=updated',
+    'https://api.github.com/users/danibeam/repos?visibility=public&sort=created',
     {
       method: 'GET',
       headers: authHeaders,
