@@ -34,13 +34,14 @@ const GlobalStyle = createGlobalStyle`
 
   p,
   label {
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5em;
   }
 
   a {
     text-decoration: none;
   }
+
 `;
 
 export default GlobalStyle;

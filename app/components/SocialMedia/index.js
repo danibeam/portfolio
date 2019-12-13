@@ -8,7 +8,7 @@ import React from 'react';
 import { IconContext } from 'react-icons';
 import './styles.scss';
 
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 
 function SocialMedia() {
   return (
@@ -33,6 +33,9 @@ function SocialMedia() {
         rel="noopener noreferrer"
       >
         <FaTwitter title="Twitter" />
+      </a>
+      <a href="mailto:danibeam97@gmail.com?subject=On%20Dani's%20Portfolio">
+        <FaMailBulk title="Email" />
       </a>
     </IconContext.Provider>
   );

@@ -1,28 +1,30 @@
 // Menu.js
 import React from 'react';
 import { bool } from 'prop-types';
+import SocialMedia from 'components/SocialMedia';
+// import ColoredLine from 'components/ColoredLine';
+import NavigatorLink from 'components/NavigatorLink';
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
 import { StyledMenu } from './StyledMenu';
+
+import './styles.scss';
 
 const Menu = ({ open }) => (
   <StyledMenu open={open}>
-    <a href="/">
-      <span role="img" aria-label="about us">
-        &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
-      </span>
-      About us
-    </a>
-    <a href="/">
-      <span role="img" aria-label="price">
-        &#x1f4b8;
-      </span>
-      Pricing
-    </a>
-    <a href="/">
-      <span role="img" aria-label="contact">
-        &#x1f4e9;
-      </span>
-      Contact
-    </a>
+    <NavigatorLink href="/">
+      <FormattedMessage {...messages.menu.home} />
+    </NavigatorLink>
+    <NavigatorLink href="/experience">
+      <FormattedMessage {...messages.menu.experience} />
+    </NavigatorLink>
+    <NavigatorLink href="/contact">
+      <FormattedMessage {...messages.menu.contact} />
+    </NavigatorLink>
+    {/* <ColoredLine color="#fafafa" /> */}
+    <div className="social_icons">
+      <SocialMedia />
+    </div>
   </StyledMenu>
 );
 
