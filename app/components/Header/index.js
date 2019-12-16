@@ -41,12 +41,12 @@ function Header() {
                     </NavigatorLink>
                   </li>
                   <li>
-                    <NavigatorLink href="">
+                    <NavigatorLink href="/experience">
                       <FormattedMessage {...messages.menu.experience} />
                     </NavigatorLink>
                   </li>
                   <li>
-                    <NavigatorLink href="">
+                    <NavigatorLink href="/contact">
                       <FormattedMessage {...messages.menu.contact} />
                     </NavigatorLink>
                   </li>

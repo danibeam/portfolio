@@ -9,8 +9,12 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.components.Contact';
 
 export default defineMessages({
+  title: {
+    id: `${scope}.title`,
+    defaultMessage: 'Contact',
+  },
   header: {
     id: `${scope}.header`,
-    defaultMessage: 'This is the Contact component!',
+    defaultMessage: 'Contact component!',
   },
 });

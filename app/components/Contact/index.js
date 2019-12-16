@@ -13,9 +13,9 @@ import messages from './messages';
 
 function Contact() {
   return (
-    <div>
+    <React.Fragment>
       <FormattedMessage {...messages.header} />
-    </div>
+    </React.Fragment>
   );
 }
 

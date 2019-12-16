@@ -14,14 +14,12 @@ import ParticlesBg from 'particles-bg';
 import styled from 'styled-components';
 import Repositories from 'containers/Repositories';
 import Skills from 'containers/Skills';
-import Footer from 'components/Footer';
 import Button from 'components/Button';
 
 import A from 'components/A';
 import DownloadCv from 'components/DownloadCv';
 // import ErrorBoundary from 'utils/ErrorBoundary';
 import messages from './messages';
-import Header from '../../components/Header';
 import SimpleSection from '../../components/SimpleSection';
 import Offer from '../../components/Offer';
 
@@ -60,7 +58,6 @@ export default function HomePage() {
   window.onerror = () => true;
   return (
     <React.Fragment>
-      <Header />
       <div style={{ position: 'relative' }}>
         <Cover>
           <Content>
@@ -118,7 +115,6 @@ export default function HomePage() {
           <Repositories />
         </Fade>
       </Container>
-      <Footer />
     </React.Fragment>
   );
 }
