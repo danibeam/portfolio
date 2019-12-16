@@ -10,6 +10,8 @@
   "app.common.loading_portfolio": "Cargando portfolio...",
   "app.common.more": "Más info",
   "app.common.send": "Enviar",
+  "app.components.Contact.header": "Puedes ponerte en contacto conmigo por medio de cualquiera de los siguientes medios:",
+  "app.components.Contact.title": "Contacto",
   "app.components.Experience.content": "",
   "app.components.Experience.header": "",
   "app.components.Experience.headline": "",

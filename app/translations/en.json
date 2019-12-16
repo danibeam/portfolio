@@ -10,6 +10,8 @@
   "app.common.loading_portfolio": "Loading portfolio...",
   "app.common.more": "More info",
   "app.common.send": "Send",
+  "app.components.Contact.header": "You can get in touch with me by any of the following methods:",
+  "app.components.Contact.title": "Get in touch",
   "app.components.Experience.content": "",
   "app.components.Experience.header": "",
   "app.components.Experience.headline": "",
