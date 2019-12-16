@@ -7,7 +7,7 @@ import produce from 'immer';
 import { DEFAULT_ACTION, CHANGE_THEME_ACTION } from './constants';
 
 export const initialState = {
-  theme: localStorage.getItem('theme') || 'default',
+  theme: localStorage.getItem('theme') || 'dracula',
 };
 
 /* eslint-disable default-case, no-param-reassign */
