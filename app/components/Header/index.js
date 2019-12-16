@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 
 import './styles.scss';
 
+import { Link } from 'react-router-dom';
 import NavigatorLink from 'components/NavigatorLink';
 import { FormattedMessage } from 'react-intl';
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
@@ -29,7 +30,9 @@ function Header() {
       <Container>
         <Row style={{ alignItems: 'center' }}>
           <Col md={4} sm={5} xs={8}>
-            <span className="title">Daniel Belmonte.</span>
+            <span className="title">
+              <Link to="/home">Daniel Belmonte.</Link>
+            </span>
           </Col>
           <Col md={8} sm={7} xs={4} className="menu_container">
             <Hidden xs>
