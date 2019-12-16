@@ -26,8 +26,13 @@ export function Experience() {
   return (
     <div>
       <Helmet>
-        <title>Experience</title>
-        <meta name="description" content="Description of Experience" />
+        <title>DB. | {<FormattedMessage {...messages.header} />}</title>
+        <meta
+          name="description"
+          author="Daniel Belmonte"
+          description={<FormattedMessage {...messages.SEODescription} />}
+          content="Daniel Belmonte Home Portfolio developer frontend full stack javascript"
+        />
       </Helmet>
       <FormattedMessage {...messages.header} />
     </div>

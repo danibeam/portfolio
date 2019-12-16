@@ -1,6 +1,6 @@
 // Menu.js
 import React from 'react';
-import { bool } from 'prop-types';
+import propTypes from 'prop-types';
 import SocialMedia from 'components/SocialMedia';
 // import ColoredLine from 'components/ColoredLine';
 import NavigatorLink from 'components/NavigatorLink';
@@ -10,15 +10,15 @@ import { StyledMenu } from './StyledMenu';
 
 import './styles.scss';
 
-const Menu = ({ open }) => (
+const Menu = ({ open, setOpen }) => (
   <StyledMenu open={open}>
-    <NavigatorLink href="/">
+    <NavigatorLink href="/" onClick={() => setOpen(false)}>
       <FormattedMessage {...messages.menu.home} />
     </NavigatorLink>
-    <NavigatorLink href="/experience">
+    <NavigatorLink href="/experience" onClick={() => setOpen(false)}>
       <FormattedMessage {...messages.menu.experience} />
     </NavigatorLink>
-    <NavigatorLink href="/contact">
+    <NavigatorLink href="/contact" onClick={() => setOpen(false)}>
       <FormattedMessage {...messages.menu.contact} />
     </NavigatorLink>
     {/* <ColoredLine color="#fafafa" /> */}
@@ -29,7 +29,8 @@ const Menu = ({ open }) => (
 );
 
 Menu.propTypes = {
-  open: bool.isRequired,
+  open: propTypes.bool.isRequired,
+  setOpen: propTypes.func,
 };
 
 export default Menu;

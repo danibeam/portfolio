@@ -6,6 +6,8 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { FormattedMessage } from 'react-intl';
 import { Container } from 'react-grid-system';
 import { Fade, Slide } from 'react-reveal';
@@ -58,6 +60,15 @@ export default function HomePage() {
   window.onerror = () => true;
   return (
     <React.Fragment>
+      <Helmet>
+        <title>DB. | Home</title>
+        <meta
+          name="description"
+          author="Daniel Belmonte"
+          description={<FormattedMessage {...messages.SEODescription} />}
+          content="Daniel Belmonte Home Portfolio developer frontend full stack javascript"
+        />
+      </Helmet>
       <div style={{ position: 'relative' }}>
         <Cover>
           <Content>

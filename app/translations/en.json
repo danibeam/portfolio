@@ -1,4 +1,5 @@
 {
+  "app.common.SEO.description": "Daniel Belmonte | Developer Portfolio. This is my personal website, where you can find out more about me and my skills, experience and more!",
   "app.common.back": "Go back",
   "app.common.cancel": "Cancel",
   "app.common.download_cv": "Download CV",
@@ -13,8 +14,8 @@
   "app.components.Contact.header": "You can get in touch with me by any of the following methods:",
   "app.components.Contact.title": "Get in touch",
   "app.components.Experience.content": "",
-  "app.components.Experience.header": "",
-  "app.components.Experience.headline": "",
+  "app.components.Experience.header": "Experience",
+  "app.components.Experience.headline": "Here you can find my career experience as a developer.",
   "app.components.Footer.header": "Daniel Belmonte | JS developer",
   "app.components.Footer.license": "This project is licensed under the MIT license",
   "app.components.Footer.menu.contact": "Contact",

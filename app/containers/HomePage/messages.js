@@ -40,4 +40,8 @@ export default defineMessages({
     id: `${commonsScope}.get_touch`,
     defaultMessage: 'Get in touch',
   },
+  SEODescription: {
+    id: `${commonsScope}.SEO.description`,
+    defaultMessage: 'SEO description',
+  },
 });
