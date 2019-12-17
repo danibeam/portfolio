@@ -34,6 +34,10 @@ export default defineMessages({
     id: `${common}.copy`,
     defaultMessage: 'copy',
   },
+  copied: {
+    id: `${common}.copied`,
+    defaultMessage: 'copied',
+  },
   SEODescription: {
     id: `${common}.description`,
     defaultMessage: 'Contact',

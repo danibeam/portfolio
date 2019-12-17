@@ -58,7 +58,8 @@ const Methods = styled.ul`
 
 const Copied = styled.div`
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fde14c;
+  color: black;
   text-align: center;
   transition: all 0.3s ease-in-out;
   position: fixed;
@@ -68,6 +69,7 @@ const Copied = styled.div`
   padding: 1em;
   display: block;
   opacity: 0;
+  z-index: 999;
   ////display: ${props => (props.copied ? 'block' : 'none')};
 `;
 
@@ -207,9 +209,13 @@ function Contact() {
         </li>
       </SM>
       {copied ? (
-        <Copied style={{ opacity: 1 }}>Copied!</Copied>
+        <Copied style={{ opacity: 1 }}>
+          <FormattedMessage {...messages.copied} />
+        </Copied>
       ) : (
-        <Copied style={{ opacity: 0 }}>Copied!</Copied>
+        <Copied style={{ opacity: 0 }}>
+          <FormattedMessage {...messages.copied} />
+        </Copied>
       )}
     </Container>
   );
