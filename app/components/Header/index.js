@@ -1,10 +1,11 @@
+/* eslint-disable indent */
 /**
  *
  * Header
  *
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
@@ -15,6 +16,8 @@ import NavigatorLink from 'components/NavigatorLink';
 import { FormattedMessage } from 'react-intl';
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
+import { DEFAULT_LOCALE } from 'i18n';
+import A from 'components/A';
 import Burger from './Burger/Burger';
 import Menu from './Menu/Menu';
 
@@ -25,6 +28,21 @@ import messages from './messages';
 
 function Header() {
   const [open, setOpen] = useState(false);
+
+  const [URL, setURL] = useState('');
+
+  useEffect(() => {
+    const locale = DEFAULT_LOCALE;
+    // eslint-disable-next-line no-unused-expressions
+    locale === 'es'
+      ? setURL(
+          'https://drive.google.com/open?id=1avJoH_cJeXxLQSQhtDWw1qCLtPGv5gHi',
+        )
+      : setURL(
+          'https://drive.google.com/open?id=1r8PWcznU1XEKkotXaLgzmWJ0JPKncUaA',
+        );
+  }, []);
+
   return (
     <div className="header">
       <Container>
@@ -53,6 +71,13 @@ function Header() {
                       <FormattedMessage {...messages.menu.contact} />
                     </NavigatorLink>
                   </li>
+                  <Hidden sm>
+                    <li>
+                      <A href={URL} target="blank" rel="noopener noreferrer">
+                        <FormattedMessage {...messages.menu.download_cv} />
+                      </A>
+                    </li>
+                  </Hidden>
                 </ul>
               </div>
             </Hidden>

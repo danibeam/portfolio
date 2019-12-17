@@ -26,7 +26,7 @@ export function Experience() {
   return (
     <div>
       <Helmet>
-        <title>DB. | {<FormattedMessage {...messages.header} />}</title>
+        <title>DB. | Experience</title>
         <meta
           name="description"
           author="Daniel Belmonte"

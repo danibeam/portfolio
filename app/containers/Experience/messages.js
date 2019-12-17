@@ -15,7 +15,7 @@ export default defineMessages({
     defaultMessage: 'Experience',
   },
   SEODescription: {
-    id: `${scope}.description`,
+    id: `${common}.description`,
     defaultMessage: 'Experience',
   },
 });

@@ -31,6 +31,10 @@
             li {
                 display: inline;
                 margin: 5px;
+                &:last-child {
+                    padding: 0 0 0 0.5em;
+                    border-left: 1px solid #666;
+                }
             }
         }
     }
