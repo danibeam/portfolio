@@ -18,13 +18,20 @@ import {
   FaStar,
 } from 'react-icons/fa';
 import { FormattedDate } from 'react-intl';
+
+import JSlogo from 'images/Javascript.png';
+import TSlogo from 'images/Typescript.png';
+import HTMLlogo from 'images/html.jpg';
+
 // import Button from 'components/Button';
 
 const Card = styled.div`
   margin: 0.5em 0;
   padding: 1em;
   border-radius: 0.5em;
-  box-shadow: 7px 6px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.02), 0 0px 5.3px rgba(0, 0, 0, 0.028),
+    0 0px 10px rgba(0, 0, 0, 0.035), 0 0px 17.9px rgba(0, 0, 0, 0.042),
+    0 0px 33.4px rgba(0, 0, 0, 0.05), 0 0px 80px rgba(0, 0, 0, 0.07);
 `;
 
 const Truncated = styled.div`
@@ -56,6 +63,11 @@ const Actions = styled.div`
 const RepoFeatures = styled.span`
   position: absolute;
   right: 0;
+  font-size: 1.2em;
+  & img {
+    width: 1em;
+    height: auto;
+  }
 `;
 
 function Repository({ repo }) {
@@ -69,6 +81,24 @@ function Repository({ repo }) {
             </A>
 
             <RepoFeatures>
+              {repo.language === 'JavaScript' ? (
+                // <FaJsSquare title="Javascript" color="yellow" />
+                <img src={JSlogo} alt="Javascript" title="Javascript" />
+              ) : (
+                ''
+              )}
+              {repo.language === 'TypeScript' ? (
+                // <FaJsSquare title="Javascript" color="yellow" />
+                <img src={TSlogo} alt="Typescript" title="Typescript" />
+              ) : (
+                ''
+              )}
+              {repo.language === 'HTML' ? (
+                // <FaJsSquare title="Javascript" color="yellow" />
+                <img src={HTMLlogo} alt="HTML" title="HTML" />
+              ) : (
+                ''
+              )}
               {repo.fork ? <FaCodeBranch title="Forked" /> : ''}
               {repo.stargazers_count > 0 ? <FaStar title="Stars given" /> : ''}
             </RepoFeatures>
@@ -148,6 +178,7 @@ Repository.propTypes = {
     homepage: PropTypes.string,
     fork: PropTypes.bool,
     stargazers_count: PropTypes.number,
+    language: PropTypes.string,
   }).isRequired,
 };
 
