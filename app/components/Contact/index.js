@@ -20,7 +20,7 @@ import {
 import A from 'components/A';
 
 import { FormattedMessage } from 'react-intl';
-import { Container } from 'react-grid-system';
+import { Container, Hidden } from 'react-grid-system';
 
 import messages from './messages';
 
@@ -73,6 +73,7 @@ const Copied = styled.div`
 
 const SM = styled.ul`
   list-style: none;
+  text-align: center;
   display: flex;
   width: 100%;
   padding-inline-start: 0;
@@ -174,7 +175,7 @@ function Contact() {
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin title="Linkedin" /> LinkedIn
+            <FaLinkedin title="Linkedin" /> <Hidden xs>LinkedIn</Hidden>
           </A>
         </li>
         <li>
@@ -183,7 +184,7 @@ function Contact() {
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaGithub title="Github" /> Github
+            <FaGithub title="Github" /> <Hidden xs>Github</Hidden>
           </A>
         </li>
         <li>
@@ -192,7 +193,7 @@ function Contact() {
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter title="Twitter" /> Twitter
+            <FaTwitter title="Twitter" /> <Hidden xs>Twitter</Hidden>
           </A>
         </li>
         <li>
@@ -201,7 +202,7 @@ function Contact() {
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram title="Instagram" /> Instagram
+            <FaInstagram title="Instagram" /> <Hidden xs>Instagram</Hidden>
           </A>
         </li>
       </SM>
