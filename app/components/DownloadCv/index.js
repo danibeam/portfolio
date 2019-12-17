@@ -77,6 +77,14 @@ const QuoteParagraph = styled.p`
   font-size: large;
 `;
 
+const PDF = styled.span`
+  margin: 0 0 0 0.5em;
+  font-size: larger;
+  & svg {
+    vertical-align: sub;
+  }
+`;
+
 function DownloadCv() {
   const [URL, setURL] = useState('');
 
@@ -98,7 +106,7 @@ function DownloadCv() {
       </Quote>
       <Button href={URL} external>
         <FormattedMessage {...messages.download_cv} />
-        <FaFilePdf />
+        <PDF><FaFilePdf /></PDF>
       </Button>
     </Styled>
   );

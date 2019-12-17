@@ -6,6 +6,8 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { FormattedMessage } from 'react-intl';
 import { Container } from 'react-grid-system';
 import { Fade, Slide } from 'react-reveal';
@@ -14,14 +16,12 @@ import ParticlesBg from 'particles-bg';
 import styled from 'styled-components';
 import Repositories from 'containers/Repositories';
 import Skills from 'containers/Skills';
-import Footer from 'components/Footer';
 import Button from 'components/Button';
 
 import A from 'components/A';
 import DownloadCv from 'components/DownloadCv';
 // import ErrorBoundary from 'utils/ErrorBoundary';
 import messages from './messages';
-import Header from '../../components/Header';
 import SimpleSection from '../../components/SimpleSection';
 import Offer from '../../components/Offer';
 
@@ -60,7 +60,15 @@ export default function HomePage() {
   window.onerror = () => true;
   return (
     <React.Fragment>
-      <Header />
+      <Helmet>
+        <title>DB. | Home</title>
+        <meta
+          name="description"
+          author="Daniel Belmonte"
+          description={<FormattedMessage {...messages.SEODescription} />}
+          content="Daniel Belmonte Home Portfolio developer frontend full stack javascript"
+        />
+      </Helmet>
       <div style={{ position: 'relative' }}>
         <Cover>
           <Content>
@@ -118,7 +126,6 @@ export default function HomePage() {
           <Repositories />
         </Fade>
       </Container>
-      <Footer />
     </React.Fragment>
   );
 }

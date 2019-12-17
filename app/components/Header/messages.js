@@ -7,6 +7,7 @@
 import { defineMessages } from 'react-intl';
 
 export const scope = 'app.components.Header';
+export const common = 'app.common';
 
 export default defineMessages({
   // header: {
@@ -25,6 +26,10 @@ export default defineMessages({
     contact: {
       id: `${scope}.menu.contact`,
       defaultMessage: 'Contact',
+    },
+    download_cv: {
+      id: `${common}.download_cv`,
+      defaultMessage: 'CV',
     },
   },
 });

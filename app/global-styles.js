@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;

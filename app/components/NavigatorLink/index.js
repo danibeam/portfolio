@@ -20,7 +20,11 @@ const Wrapper = styled.span`
 function NavigatorLink(props) {
   return (
     <Wrapper>
-      <Link to={props.href || '#'} style={{ color: 'inherit' }}>
+      <Link
+        to={props.href || '#'}
+        style={{ color: 'inherit' }}
+        onClick={props.onClick}
+      >
         {Children.toArray(props.children)}
       </Link>
     </Wrapper>
@@ -30,6 +34,7 @@ function NavigatorLink(props) {
 NavigatorLink.propTypes = {
   href: PropTypes.string,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default NavigatorLink;

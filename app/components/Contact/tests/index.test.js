@@ -11,16 +11,15 @@ import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import { Contact } from '../index';
+import Contact from '../index';
 import { DEFAULT_LOCALE } from '../../../i18n';
 
 describe('<Contact />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    const dispatch = jest.fn();
     render(
       <IntlProvider locale={DEFAULT_LOCALE}>
-        <Contact dispatch={dispatch} />
+        <Contact />
       </IntlProvider>,
     );
     expect(spy).not.toHaveBeenCalled();
