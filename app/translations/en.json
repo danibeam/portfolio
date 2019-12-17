@@ -15,6 +15,7 @@
   "app.components.Contact.header": "You can get in touch with me by any of the following methods:",
   "app.components.Contact.mail": "Mail",
   "app.components.Contact.phone": "Phone",
+  "app.components.Contact.socialmedia": "You also have my social media (both working and personal) available right below.",
   "app.components.Contact.title": "Get in touch",
   "app.components.Experience.header": "Experience",
   "app.components.Experience.headline": "Here you can find my career experience as a developer.",

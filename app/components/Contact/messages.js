@@ -26,6 +26,10 @@ export default defineMessages({
     id: `${scope}.phone`,
     defaultMessage: 'Phone',
   },
+  socialmedia: {
+    id: `${scope}.socialmedia`,
+    defaultMessage: 'SM',
+  },
   copy: {
     id: `${common}.copy`,
     defaultMessage: 'copy',

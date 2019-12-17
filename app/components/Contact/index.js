@@ -14,6 +14,8 @@ import {
   FaMailBulk,
   FaPhone,
   FaCopy,
+  FaGithub,
+  FaInstagram,
 } from 'react-icons/fa';
 import A from 'components/A';
 
@@ -54,29 +56,6 @@ const Methods = styled.ul`
   }
 `;
 
-const AnchorLI = styled.a`
-  transition: 0.5s;
-  &:hover {
-    text-decoration: none;
-    color: #556393 !important;
-  }
-  &:visited {
-    color: black;
-  }
-`;
-
-const AnchorTW = styled.a`
-  transition: 0.5s;
-  color: black;
-  &:hover {
-    text-decoration: none;
-    color: #42d3c1 !important;
-  }
-  &:visited {
-    color: black;
-  }
-`;
-
 const Copied = styled.div`
   width: 100%;
   background-color: #fafafa;
@@ -90,6 +69,22 @@ const Copied = styled.div`
   display: block;
   opacity: 0;
   ////display: ${props => (props.copied ? 'block' : 'none')};
+`;
+
+const SM = styled.ul`
+  list-style: none;
+  display: flex;
+  width: 100%;
+  padding-inline-start: 0;
+  & li {
+    width: 25%;
+    margin: 1em 0;
+    & svg {
+      font-size: larger;
+      margin: 0 0.5em 0 0;
+      vertical-align: sub;
+    }
+  }
 `;
 
 function Contact() {
@@ -133,7 +128,9 @@ function Contact() {
           <FormattedMessage {...messages.mail} />
           <ul>
             <li>
-              <A href="mailto:danibeam97@gmail.com">danibeam97@gmail.com</A>
+              <A href="mailto:danibeam97@gmail.com?subject=On%20Dani's%20Portfolio">
+                danibeam97@gmail.com
+              </A>
               &nbsp;
               <FaCopy
                 title={<FormattedMessage {...messages.copy} />}
@@ -165,25 +162,49 @@ function Contact() {
             </li>
           </ul>
         </li>
+      </Methods>
+      <p>
+        <br />
+        <FormattedMessage {...messages.socialmedia} />
+      </p>
+      <SM>
         <li>
-          <AnchorLI
+          <A
             href="https://www.linkedin.com/in/daniel-belmonte-amor%C3%B3s-754433132/"
             target="blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin title="Linkedin" /> LinkedIn
-          </AnchorLI>
+          </A>
         </li>
         <li>
-          <AnchorTW
+          <A
+            href="https://github.com/danibeam"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub title="Github" /> Github
+          </A>
+        </li>
+        <li>
+          <A
             href="https://twitter.com/danibelmonte_"
             target="blank"
             rel="noopener noreferrer"
           >
             <FaTwitter title="Twitter" /> Twitter
-          </AnchorTW>
+          </A>
         </li>
-      </Methods>
+        <li>
+          <A
+            href="https://instagram.com/danibeam_"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram title="Instagram" /> Instagram
+          </A>
+        </li>
+      </SM>
       {copied ? (
         <Copied style={{ opacity: 1 }}>Copied!</Copied>
       ) : (
