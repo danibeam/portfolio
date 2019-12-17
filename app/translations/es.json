@@ -13,6 +13,8 @@
   "app.common.more": "Más info",
   "app.common.send": "Enviar",
   "app.components.Contact.header": "Puedes ponerte en contacto conmigo por medio de cualquiera de los siguientes medios:",
+  "app.components.Contact.mail": "Correo",
+  "app.components.Contact.phone": "Teléfono",
   "app.components.Contact.title": "Contacto",
   "app.components.Experience.header": "Experiencia",
   "app.components.Experience.headline": "Aquí podrás encontrar mi experiencia detalladad como developer.",

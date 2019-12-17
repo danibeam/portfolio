@@ -18,6 +18,14 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'Contact component!',
   },
+  mail: {
+    id: `${scope}.mail`,
+    defaultMessage: 'Mail',
+  },
+  phone: {
+    id: `${scope}.phone`,
+    defaultMessage: 'Phone',
+  },
   copy: {
     id: `${common}.copy`,
     defaultMessage: 'copy',

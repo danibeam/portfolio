@@ -67,6 +67,7 @@ const AnchorLI = styled.a`
 
 const AnchorTW = styled.a`
   transition: 0.5s;
+  color: black;
   &:hover {
     text-decoration: none;
     color: #42d3c1 !important;
@@ -129,7 +130,7 @@ function Contact() {
       <Methods>
         <li>
           <FaMailBulk />
-          Mail
+          <FormattedMessage {...messages.mail} />
           <ul>
             <li>
               <A href="mailto:danibeam97@gmail.com">danibeam97@gmail.com</A>
@@ -144,7 +145,7 @@ function Contact() {
         </li>
         <li>
           <FaPhone />
-          Phone
+          <FormattedMessage {...messages.phone} />
           <ul>
             <li>
               <strong>+34</strong> 618 017 783 &nbsp;
