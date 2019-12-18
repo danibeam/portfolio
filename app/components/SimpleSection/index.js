@@ -7,6 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Avatar from 'images/descarga.jpg';
 
 const Title = styled.h2`
   position: relative;
@@ -33,11 +34,35 @@ const Content = styled.p`
   text-align: justify;
 `;
 
+const ProfileIMG = styled.span`
+  @media (min-width: 767px) {
+    display: grid;
+  }
+  & img {
+    float: left;
+    border-radius: 50%;
+    margin: 0 1em 1em 0;
+    width: 150px;
+    height: auto;
+
+    @media (min-width: 767px) {
+      margin: 0.5em 40%;
+    }
+  }
+`;
+
 function SimpleSection(props) {
   return (
     <section>
       <Title>{props.title}</Title>
       <Headline>{props.headline}</Headline>
+      {props.profile ? (
+        <ProfileIMG>
+          <img src={Avatar} alt="Profile" title="Profile" />
+        </ProfileIMG>
+      ) : (
+        ''
+      )}
       <Content>{props.content}</Content>
     </section>
   );
@@ -50,6 +75,7 @@ SimpleSection.propTypes = {
   headline: PropTypes.object,
   // content: PropTypes.string,
   content: PropTypes.object,
+  profile: PropTypes.bool,
 };
 
 export default SimpleSection;

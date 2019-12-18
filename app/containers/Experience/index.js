@@ -21,6 +21,8 @@ import makeSelectExperience from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
+import CareerInNumbers from '../../components/CareerInNumbers';
+import './styles.scss';
 
 const Title = styled.h2`
   position: relative;
@@ -62,7 +64,9 @@ export function Experience(props, context) {
         <FormattedMessage {...messages.header} />
       </Title>
 
-      <p>Idea*: something like My career in numbers</p>
+      <CareerInNumbers />
+
+      <div className="divider div-transparent" />
 
       <Timeline lineColor="#ddd">
         <TimelineItem
