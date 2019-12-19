@@ -11,6 +11,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
+import { Experience } from 'containers/Experience';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import Header from 'components/Header';
@@ -26,6 +27,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/home" component={HomePage} />
+        <Route exact path="/experience" component={Experience} />
         <Route exact path="/contact" component={Contact} />
         <Route component={NotFoundPage} />
       </Switch>

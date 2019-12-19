@@ -98,6 +98,7 @@ export default function HomePage() {
         </h1> */}
         <Fade>
           <SimpleSection
+            profile
             title={<FormattedMessage {...messages.profile.header} />}
             headline={<FormattedMessage {...messages.profile.headline} />}
             content={
