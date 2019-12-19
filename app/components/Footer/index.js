@@ -12,7 +12,7 @@ import { Container, Row, Col, Visible } from 'react-grid-system';
 
 import { FormattedMessage } from 'react-intl';
 import SocialMedia from 'components/SocialMedia';
-import { HashLink as Link } from 'react-router-hash-link';
+import NavigatorLink from 'components/NavigatorLink';
 import A from 'components/A';
 import messages from './messages';
 
@@ -30,17 +30,6 @@ const Wrapper = styled.footer`
   margin-top: 2em;
 `;
 
-const StyledLink = styled.span`
-  & a {
-    color: inherit;
-    font-weight: bolder;
-    &:visited,
-    &:focus {
-      color: #fafafa;
-    }
-  }
-`;
-
 function Footer() {
   return (
     <Wrapper>
@@ -52,23 +41,17 @@ function Footer() {
           <Col md={3} lg={3} />
 
           <Col xs={12} md={3} lg={3}>
-            <StyledLink>
-              <Link to="/home#header">
-                <FormattedMessage {...messages.navigation_home} />
-              </Link>
-            </StyledLink>
+            <NavigatorLink href="/">
+              <FormattedMessage {...messages.navigation_home} />
+            </NavigatorLink>
             &nbsp; | &nbsp;
-            <StyledLink>
-              <Link to="/experience#header">
-                <FormattedMessage {...messages.navigation_experience} />
-              </Link>
-            </StyledLink>
+            <NavigatorLink href="/experience">
+              <FormattedMessage {...messages.navigation_experience} />
+            </NavigatorLink>
             &nbsp; | &nbsp;
-            <StyledLink>
-              <Link to="/contact#header">
-                <FormattedMessage {...messages.navigation_contact} />
-              </Link>
-            </StyledLink>
+            <NavigatorLink href="/contact">
+              <FormattedMessage {...messages.navigation_contact} />
+            </NavigatorLink>
           </Col>
           <Visible xs sm>
             <br />

@@ -14,18 +14,6 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'Experience',
   },
-  present: {
-    id: `${scope}.present`,
-    defaultMessage: 'Present',
-  },
-  spain: {
-    id: `${scope}.spain`,
-    defaultMessage: 'Spain',
-  },
-  uk: {
-    id: `${scope}.uk`,
-    defaultMessage: 'UK',
-  },
   SEODescription: {
     id: `${common}.description`,
     defaultMessage: 'Experience',
