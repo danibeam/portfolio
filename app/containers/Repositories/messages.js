@@ -13,4 +13,12 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'This is the Repositories container!',
   },
+  headline: {
+    id: `${scope}.headline`,
+    defaultMessage: 'headline',
+  },
+  action: {
+    id: `${scope}.action`,
+    defaultMessage: 'action',
+  },
 });

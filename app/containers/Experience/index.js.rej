@@ -1,0 +1,16 @@
+diff a/app/containers/Experience/index.js b/app/containers/Experience/index.js	(rejected hunks)
+@@ -93 +93,3 @@ export function Experience(props, context) {
+-          <TagWrapper>#Consulting #Angular #React #Redux #MaterialUI #StyledComponents</TagWrapper>
++          <TagWrapper>
++            #Consulting #Angular #React #Redux #MaterialUI #StyledComponents
++          </TagWrapper>
+@@ -116 +118,3 @@ export function Experience(props, context) {
+-          <TagWrapper>#Geospatial #Angular #MaterialUI #NodeJS #PostgreSQL #AWS</TagWrapper>
++          <TagWrapper>
++            #Geospatial #Angular #MaterialUI #NodeJS #PostgreSQL #AWS
++          </TagWrapper>
+@@ -137 +141,3 @@ export function Experience(props, context) {
+-          <TagWrapper>#Ecommerce #B2B #B2C #Angular #NGRX #BrandUIComponents #BEM #SASS</TagWrapper>
++          <TagWrapper>
++            #Ecommerce #B2B #B2C #Angular #NGRX #BrandUIComponents #BEM #SASS
++          </TagWrapper>

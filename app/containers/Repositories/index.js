@@ -16,7 +16,8 @@ import { useInjectReducer } from 'utils/injectReducer';
 
 import Repository from 'components/Repository';
 import styled from 'styled-components';
-import { Row } from 'react-grid-system';
+import { Container, Row } from 'react-grid-system';
+import Button from 'components/Button';
 
 import makeSelectRepositories from './selectors';
 import reducer from './reducer';
@@ -39,6 +40,12 @@ const Title = styled.h2`
   }
 `;
 
+const ButtonWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  margin: 1em auto;
+`;
+
 export function Repositories(props) {
   useInjectReducer({ key: 'repositories', reducer });
   useInjectSaga({ key: 'repositories', saga });
@@ -46,10 +53,17 @@ export function Repositories(props) {
   const { repositories } = props;
 
   return (
-    <div>
-      <Title>
-        <FormattedMessage {...messages.header} />
-      </Title>
+    <Container>
+      <Row>
+        <Title>
+          <FormattedMessage {...messages.header} />
+        </Title>
+      </Row>
+      <Row>
+        <p>
+          <FormattedMessage {...messages.headline} />
+        </p>
+      </Row>
       <Row>
         {reducer.loading ? (
           <p>Loading...</p>
@@ -59,7 +73,14 @@ export function Repositories(props) {
           ))
         )}
       </Row>
-    </div>
+      <Row>
+        <ButtonWrapper>
+          <Button external href="https://github.com/danibeam">
+            <FormattedMessage {...messages.action} />
+          </Button>
+        </ButtonWrapper>
+      </Row>
+    </Container>
   );
 }
 
