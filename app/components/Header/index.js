@@ -44,7 +44,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="header" id="header">
+    <div className="header">
       <Container>
         <Row style={{ alignItems: 'center' }}>
           <Col md={4} sm={5} xs={8}>
