@@ -18,9 +18,25 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'Contact component!',
   },
+  mail: {
+    id: `${scope}.mail`,
+    defaultMessage: 'Mail',
+  },
+  phone: {
+    id: `${scope}.phone`,
+    defaultMessage: 'Phone',
+  },
+  socialmedia: {
+    id: `${scope}.socialmedia`,
+    defaultMessage: 'SM',
+  },
   copy: {
     id: `${common}.copy`,
     defaultMessage: 'copy',
+  },
+  copied: {
+    id: `${common}.copied`,
+    defaultMessage: 'copied',
   },
   SEODescription: {
     id: `${common}.description`,

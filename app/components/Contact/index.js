@@ -14,11 +14,13 @@ import {
   FaMailBulk,
   FaPhone,
   FaCopy,
+  FaGithub,
+  FaInstagram,
 } from 'react-icons/fa';
 import A from 'components/A';
 
 import { FormattedMessage } from 'react-intl';
-import { Container } from 'react-grid-system';
+import { Container, Hidden } from 'react-grid-system';
 
 import messages from './messages';
 
@@ -54,31 +56,10 @@ const Methods = styled.ul`
   }
 `;
 
-const AnchorLI = styled.a`
-  transition: 0.5s;
-  &:hover {
-    text-decoration: none;
-    color: #556393 !important;
-  }
-  &:visited {
-    color: black;
-  }
-`;
-
-const AnchorTW = styled.a`
-  transition: 0.5s;
-  &:hover {
-    text-decoration: none;
-    color: #42d3c1 !important;
-  }
-  &:visited {
-    color: black;
-  }
-`;
-
 const Copied = styled.div`
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fde14c;
+  color: black;
   text-align: center;
   transition: all 0.3s ease-in-out;
   position: fixed;
@@ -88,7 +69,25 @@ const Copied = styled.div`
   padding: 1em;
   display: block;
   opacity: 0;
+  z-index: 999;
   ////display: ${props => (props.copied ? 'block' : 'none')};
+`;
+
+const SM = styled.ul`
+  list-style: none;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  padding-inline-start: 0;
+  & li {
+    width: 25%;
+    margin: 1em 0;
+    & svg {
+      font-size: larger;
+      margin: 0 0.5em 0 0;
+      vertical-align: sub;
+    }
+  }
 `;
 
 function Contact() {
@@ -129,10 +128,12 @@ function Contact() {
       <Methods>
         <li>
           <FaMailBulk />
-          Mail
+          <FormattedMessage {...messages.mail} />
           <ul>
             <li>
-              <A href="mailto:danibeam97@gmail.com">danibeam97@gmail.com</A>
+              <A href="mailto:danibeam97@gmail.com?subject=On%20Dani's%20Portfolio">
+                danibeam97@gmail.com
+              </A>
               &nbsp;
               <FaCopy
                 title={<FormattedMessage {...messages.copy} />}
@@ -144,7 +145,7 @@ function Contact() {
         </li>
         <li>
           <FaPhone />
-          Phone
+          <FormattedMessage {...messages.phone} />
           <ul>
             <li>
               <strong>+34</strong> 618 017 783 &nbsp;
@@ -164,29 +165,57 @@ function Contact() {
             </li>
           </ul>
         </li>
+      </Methods>
+      <p>
+        <br />
+        <FormattedMessage {...messages.socialmedia} />
+      </p>
+      <SM>
         <li>
-          <AnchorLI
+          <A
             href="https://www.linkedin.com/in/daniel-belmonte-amor%C3%B3s-754433132/"
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin title="Linkedin" /> LinkedIn
-          </AnchorLI>
+            <FaLinkedin title="Linkedin" /> <Hidden xs>LinkedIn</Hidden>
+          </A>
         </li>
         <li>
-          <AnchorTW
+          <A
+            href="https://github.com/danibeam"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub title="Github" /> <Hidden xs>Github</Hidden>
+          </A>
+        </li>
+        <li>
+          <A
             href="https://twitter.com/danibelmonte_"
             target="blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter title="Twitter" /> Twitter
-          </AnchorTW>
+            <FaTwitter title="Twitter" /> <Hidden xs>Twitter</Hidden>
+          </A>
         </li>
-      </Methods>
+        <li>
+          <A
+            href="https://instagram.com/danibeam_"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram title="Instagram" /> <Hidden xs>Instagram</Hidden>
+          </A>
+        </li>
+      </SM>
       {copied ? (
-        <Copied style={{ opacity: 1 }}>Copied!</Copied>
+        <Copied style={{ opacity: 1 }}>
+          <FormattedMessage {...messages.copied} />
+        </Copied>
       ) : (
-        <Copied style={{ opacity: 0 }}>Copied!</Copied>
+        <Copied style={{ opacity: 0 }}>
+          <FormattedMessage {...messages.copied} />
+        </Copied>
       )}
     </Container>
   );
