@@ -26,6 +26,18 @@ export default defineMessages({
     id: `${scope}.uk`,
     defaultMessage: 'UK',
   },
+  Accenture: {
+    id: `${scope}.Accenture`,
+    defaultMessage: 'Accenture',
+  },
+  Cyient: {
+    id: `${scope}.Cyient`,
+    defaultMessage: 'Cyient',
+  },
+  NitsNets: {
+    id: `${scope}.NitsNets`,
+    defaultMessage: 'NitsNets',
+  },
   SEODescription: {
     id: `${common}.description`,
     defaultMessage: 'Experience',

@@ -43,6 +43,7 @@ const Title = styled.h2`
 const TagWrapper = styled.p`
   font-weight: bold;
   font-size: 1.2em;
+  text-align: center;
 `;
 
 export function Experience(props, context) {
@@ -86,32 +87,16 @@ export function Experience(props, context) {
             </A>
           </h3>
           <h4>Alicante, {context.intl.formatMessage(messages.spain)}</h4>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
+          <p style={{ textAlign: 'justify' }}>
+            <FormattedMessage {...messages.Accenture} values={{ br: <br /> }} />
           </p>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
-          </p>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
-          </p>
-          <TagWrapper>#Consulting #Angular #React #Redux</TagWrapper>
+          <TagWrapper>
+            #Consulting #Angular #React #Redux #MaterialUI #StyledComponents
+          </TagWrapper>
         </TimelineItem>
         <TimelineItem
           key="002"
-          dateText="10/2018 – 04/2018"
+          dateText="10/2018 – 04/2019"
           dateInnerStyle={{ background: '#556393', color: '#fafafa' }}
         >
           <h3>
@@ -127,21 +112,12 @@ export function Experience(props, context) {
           <h4>
             Reading (Berkshire), {context.intl.formatMessage(messages.uk)}
           </h4>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
+          <p style={{ textAlign: 'justify' }}>
+            <FormattedMessage {...messages.Cyient} values={{ br: <br /> }} />
           </p>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
-          </p>
-          <TagWrapper>#Geospatial #Angular #NodeJS #PostgreSQL #AWS</TagWrapper>
+          <TagWrapper>
+            #Geospatial #Angular #MaterialUI #NodeJS #PostgreSQL #AWS
+          </TagWrapper>
         </TimelineItem>
         <TimelineItem
           key="004"
@@ -159,21 +135,12 @@ export function Experience(props, context) {
             </A>
           </h3>
           <h4>Alicante, {context.intl.formatMessage(messages.spain)}</h4>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
+          <p style={{ textAlign: 'justify' }}>
+            <FormattedMessage {...messages.NitsNets} values={{ br: <br /> }} />
           </p>
-          <p>
-            Est incididunt sint eu minim dolore mollit velit velit commodo ex
-            nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-            magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-            irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-            qui duis Lorem est.
-          </p>
-          <TagWrapper>#Ecommerce #B2B #B2C #Angular #NGRX</TagWrapper>
+          <TagWrapper>
+            #Ecommerce #B2B #B2C #Angular #NGRX #BrandUIComponents #BEM #SASS
+          </TagWrapper>
         </TimelineItem>
       </Timeline>
     </Container>
@@ -181,7 +148,8 @@ export function Experience(props, context) {
 }
 
 Experience.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  // dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func,
 };
 
 Experience.contextTypes = {
