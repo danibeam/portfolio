@@ -19,8 +19,8 @@ import {
 } from 'react-icons/fa';
 import { FormattedDate } from 'react-intl';
 
-import JSlogo from 'images/Javascript.png';
-import TSlogo from 'images/Typescript.png';
+import JSlogo from 'images/javascript.jpg';
+import TSlogo from 'images/typescript.jpg';
 import HTMLlogo from 'images/html.jpg';
 
 // import Button from 'components/Button';
