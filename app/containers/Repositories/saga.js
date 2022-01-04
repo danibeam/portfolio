@@ -13,14 +13,15 @@ function* getRepos() {
   authHeaders.set(
     'Authorization',
     `Basic ${Buffer.from(
-      'danibeam:acbfbd2a99d0a736f77bdec2a9f6dc9f6100deea',
+      // 'danibeam:acbfbd2a99d0a736f77bdec2a9f6dc9f6100deea',
+      'danibeam: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',
     ).toString('base64')}`,
   );
   const json = yield fetch(
     'https://api.github.com/users/danibeam/repos?visibility=public&sort=created',
     {
       method: 'GET',
-      // headers: authHeaders,
+      headers: authHeaders,
     },
   ).then(
     res => res.json(),
