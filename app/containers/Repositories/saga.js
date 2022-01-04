@@ -20,7 +20,7 @@ function* getRepos() {
     'https://api.github.com/users/danibeam/repos?visibility=public&sort=created',
     {
       method: 'GET',
-      headers: authHeaders,
+      // headers: authHeaders,
     },
   ).then(
     res => res.json(),
